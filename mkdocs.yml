@@ -1,0 +1,94 @@
+site_name: NexusSlime Wiki
+site_description: Comprehensive documentation for the NexusSlime Minecraft plugin
+site_author: O-Tiger, 8-byte, HexNode
+site_url: https://o-tiger.github.io/NexusSlime/
+repo_url: https://github.com/O-Tiger/NexusSlime
+repo_name: O-Tiger/NexusSlime
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/O-Tiger/NexusSlime
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/nexusslime
+  version:
+    provider: mike
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Modules:
+    - modules/index.md
+    - Core: modules/core.md
+    - Essentials: modules/essentials.md
+    - Economy: modules/economy.md
+    - Clans: modules/clans.md
+    - Security: modules/security.md
+    - Discord: modules/discord.md
+    - Crystal Defense: modules/crystal-defense.md
+    - Votifier: modules/votifier.md
+    - Dreams: modules/dreams.md
+    - Protections: modules/protections.md
+    - Custom Mobs: modules/custom-mobs.md
+    - Infinity Crafting: modules/infinity-crafting.md
+    - Twitch Integration: modules/twitch.md
+  - Reference:
+    - PlaceholderAPI: reference/placeholders.md
+    - Permissions: reference/permissions.md
+    - Commands: reference/commands.md
+  - Store: store.md
+  - Changelog: changelog.md
