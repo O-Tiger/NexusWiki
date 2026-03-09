@@ -9,7 +9,7 @@
         <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
       
       
-        <meta name="author" content="O-Tiger, 8-byte, HexNode">
+        <meta name="author" content="O-Tiger">
       
       
         <link rel="canonical" href="https://o-tiger.github.io/NexusSlime/modules/twitch/">
@@ -1627,29 +1627,31 @@
 </code></pre></div>
 <hr />
 <h2 id="account-linking-flow">Account Linking Flow<a class="headerlink" href="#account-linking-flow" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Player runs /twitch link &lt;username&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        │
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        ▼
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Bot sends a 5-character code in the verification Twitch channel
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        │
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        ▼
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Player types !verify &lt;code&gt; in the Twitch chat
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        │
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        ▼
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>[If require-staff-approval: true]
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Staff approves with /twitch approve &lt;player&gt;
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        │
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        ▼
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>Link is active — live tag and announcements apply
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Player</span><span class="w"> </span><span class="n">runs</span><span class="w"> </span><span class="o">/</span><span class="n">twitch</span><span class="w"> </span><span class="n">link</span><span class="w"> </span><span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="err">│</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="err">▼</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">Bot</span><span class="w"> </span><span class="n">sends</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="mi">5</span><span class="o">-</span><span class="n">character</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">verification</span><span class="w"> </span><span class="n">Twitch</span><span class="w"> </span><span class="n">channel</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="err">│</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="err">▼</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="n">Player</span><span class="w"> </span><span class="n">types</span><span class="w"> </span><span class="o">!</span><span class="n">verify</span><span class="w"> </span><span class="o">&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Twitch</span><span class="w"> </span><span class="n">chat</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="err">│</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="err">▼</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="na">[If require-staff-approval: true]</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">Staff</span><span class="w"> </span><span class="n">approves</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="o">/</span><span class="n">twitch</span><span class="w"> </span><span class="n">approve</span><span class="w"> </span><span class="o">&lt;</span><span class="n">player</span><span class="o">&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="err">│</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="err">▼</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="n">Link</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">active</span><span class="w"> </span><span class="err">—</span><span class="w"> </span><span class="n">live</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">announcements</span><span class="w"> </span><span class="n">apply</span>
 </code></pre></div>
 <hr />
 <h2 id="giveaway-system">Giveaway System<a class="headerlink" href="#giveaway-system" title="Permanent link">&para;</a></h2>
-<p>Staff can run <code>/twitch giveaway &lt;streamer&gt;</code> to:
-1. Fetch all currently linked viewers watching that streamer's channel
-2. Filter to viewers who sent a message in the last <code>active-viewer-window-minutes</code>
-3. Randomly select one eligible viewer
-4. Execute the configured <code>command</code> (or give the <code>key-item</code>) to the winner
-5. Announce the winner in-game and in Twitch chat</p>
+<p>Staff can run <code>/twitch giveaway &lt;streamer&gt;</code> to:</p>
+<ol>
+<li>Fetch all currently linked viewers watching that streamer's channel</li>
+<li>Filter to viewers who sent a message in the last <code>active-viewer-window-minutes</code></li>
+<li>Randomly select one eligible viewer</li>
+<li>Execute the configured <code>command</code> (or give the <code>key-item</code>) to the winner</li>
+<li>Announce the winner in-game and in Twitch chat</li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Bot Permissions Required</p>
 <p>For the viewer reward system to fetch the chatters list, the bot account must have the <code>moderator:read:chatters</code> OAuth scope and be a moderator in the streamer's channel.</p>

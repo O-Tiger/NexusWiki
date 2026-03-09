@@ -9,7 +9,7 @@
         <meta name="description" content="Comprehensive documentation for the NexusSlime Minecraft plugin">
       
       
-        <meta name="author" content="O-Tiger, 8-byte, HexNode">
+        <meta name="author" content="O-Tiger">
       
       
         <link rel="canonical" href="https://o-tiger.github.io/NexusSlime/modules/core/">
@@ -734,10 +734,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#commands_1" class="md-nav__link">
+  <a href="#waypoints-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands
+        Waypoints Commands
       
     </span>
   </a>
@@ -1491,10 +1491,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#commands_1" class="md-nav__link">
+  <a href="#waypoints-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands
+        Waypoints Commands
       
     </span>
   </a>
@@ -1660,10 +1660,12 @@
 <hr />
 <h2 id="pdc-system">PDC System<a class="headerlink" href="#pdc-system" title="Permanent link">&para;</a></h2>
 <p>NexusSlime uses Minecraft's <strong>PersistentDataContainer</strong> to tag custom items, machines, and player data. Each NexusSlime item carries a <code>nexusslime:id</code> PDC key that identifies it uniquely.</p>
-<p>Key classes:
-- <code>CustomItemRegistry</code> — registers and resolves all custom items
-- <code>NexusItemIdResolver</code> — resolves item IDs from PDC
-- <code>NexusItemMigrator</code> — migrates legacy items to new IDs</p>
+<p>Key classes:</p>
+<ul>
+<li><code>CustomItemRegistry</code> — registers and resolves all custom items</li>
+<li><code>NexusItemIdResolver</code> — resolves item IDs from PDC</li>
+<li><code>NexusItemMigrator</code> — migrates legacy items to new IDs</li>
+</ul>
 <hr />
 <h2 id="research-system">Research System<a class="headerlink" href="#research-system" title="Permanent link">&para;</a></h2>
 <p>Players unlock items and machines by spending XP on research. Research is tiered — <strong>Basic → Advanced → Infinity</strong>.</p>
@@ -1752,7 +1754,7 @@
 <hr />
 <h2 id="waypoints">Waypoints<a class="headerlink" href="#waypoints" title="Permanent link">&para;</a></h2>
 <p>Waypoints are personal fast-travel points saved by the player.</p>
-<h3 id="commands_1">Commands<a class="headerlink" href="#commands_1" title="Permanent link">&para;</a></h3>
+<h3 id="waypoints-commands">Waypoints Commands<a class="headerlink" href="#waypoints-commands" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1910,10 +1912,10 @@
 </tr>
 </tbody>
 </table>
-<p>Set the active language in <code>config.yml</code>:
+<p>Set the active language in <code>config.yml</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">settings</span><span class="p">:</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">en_US</span>
-</code></pre></div></p>
+</code></pre></div>
 
 
 
