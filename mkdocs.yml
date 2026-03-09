@@ -72,23 +72,23 @@ nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - Modules:
-    - modules/index.md
-    - Core: modules/core.md
-    - Essentials: modules/essentials.md
-    - Economy: modules/economy.md
-    - Clans: modules/clans.md
-    - Security: modules/security.md
-    - Discord: modules/discord.md
-    - Crystal Defense: modules/crystal-defense.md
-    - Votifier: modules/votifier.md
-    - Dreams: modules/dreams.md
-    - Protections: modules/protections.md
-    - Custom Mobs: modules/custom-mobs.md
-    - Infinity Crafting: modules/infinity-crafting.md
-    - Twitch Integration: modules/twitch.md
+      - modules/index.md
+      - Core: modules/core.md
+      - Essentials: modules/essentials.md
+      - Economy: modules/economy.md
+      - Clans: modules/clans.md
+      - Security: modules/security.md
+      - Discord: modules/discord.md
+      - Crystal Defense: modules/crystal-defense.md
+      - Votifier: modules/votifier.md
+      - Dreams: modules/dreams.md
+      - Protections: modules/protections.md
+      - Custom Mobs: modules/custom-mobs.md
+      - Infinity Crafting: modules/infinity-crafting.md
+      - Twitch Integration: modules/twitch.md
   - Reference:
-    - PlaceholderAPI: reference/placeholders.md
-    - Permissions: reference/permissions.md
-    - Commands: reference/commands.md
+      - PlaceholderAPI: reference/placeholders.md
+      - Permissions: reference/permissions.md
+      - Commands: reference/commands.md
   - Store: store.md
   - Changelog: changelog.md

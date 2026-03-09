@@ -64,22 +64,22 @@ NexusSlime
 
 ## Quick Navigation
 
-- :material-rocket-launch: **[Getting Started](getting-started.md)**
+- 🚀 **[Getting Started](getting-started.md)**
   Installation, requirements, and first steps
 
-- :material-cog: **[Core Module](modules/core.md)**
+- ⚙️ **[Core Module](modules/core.md)**
   Items, PDC system, custom item registry
 
-- :material-sword: **[All Modules](modules/index.md)**
+- ⚔️ **[All Modules](modules/index.md)**
   Browse all 13 feature modules
 
-- :material-console: **[Commands Reference](reference/commands.md)**
+- 📝 **[Commands Reference](reference/commands.md)**
   All 40+ commands with usage and permissions
 
-- :material-key: **[Permissions Reference](reference/permissions.md)**
+- 🗝️ **[Permissions Reference](reference/permissions.md)**
   Complete permission node list
 
-- :material-format-list-text: **[PlaceholderAPI](reference/placeholders.md)**
+- 📄 **[PlaceholderAPI](reference/placeholders.md)**
   All `%nexusslime_*%` placeholders
 
 </div>
