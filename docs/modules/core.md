@@ -41,7 +41,7 @@ NEXUS_PICKAXE:
 ### Item Categories
 
 | Category | Description |
-|---|---|
+| --- | --- |
 | `DUST` | Crafting dusts (copper, tin, silver…) |
 | `INGOT` | Processed metal ingots |
 | `TOOL` | Custom tools and weapons |
@@ -54,7 +54,7 @@ NEXUS_PICKAXE:
 ### Item Tiers (`NexusTier`)
 
 | Tier | Description |
-|---|---|
+| --- | --- |
 | `BASIC` | Starter tier — no research required |
 | `ADVANCED` | Requires basic research |
 | `INFINITY` | Endgame tier — requires parchments |
@@ -66,6 +66,7 @@ NEXUS_PICKAXE:
 NexusSlime uses Minecraft's **PersistentDataContainer** to tag custom items, machines, and player data. Each NexusSlime item carries a `nexusslime:id` PDC key that identifies it uniquely.
 
 Key classes:
+
 - `CustomItemRegistry` — registers and resolves all custom items
 - `NexusItemIdResolver` — resolves item IDs from PDC
 - `NexusItemMigrator` — migrates legacy items to new IDs
@@ -90,7 +91,7 @@ COPPER_PROCESSING:
 ```
 
 | Permission | Description |
-|---|---|
+| --- | --- |
 | `nexusslime.research` | Use the research system (default: true) |
 | `nexusslime.research.all` | Unlock all research instantly (OP) |
 
@@ -103,7 +104,7 @@ Backpacks are portable storage containers. Players start with a basic backpack a
 ### Commands
 
 | Command | Usage | Permission |
-|---|---|---|
+| --- | --- | --- |
 | `/backpack open` | Open your backpack | `nexusslime.essentials.backpack` |
 | `/backpack open <id>` | Open a specific backpack | `nexusslime.essentials.backpack` |
 | `/backpack list` | List all backpacks | `nexusslime.essentials.backpack` |
@@ -111,7 +112,7 @@ Backpacks are portable storage containers. Players start with a basic backpack a
 ### Permissions
 
 | Permission | Description |
-|---|---|
+| --- | --- |
 | `nexusslime.backpack.create` | Create backpacks (default: true) |
 | `nexusslime.backpack.upgrade` | Upgrade backpacks (default: true) |
 | `nexusslime.backpack.unlimited` | Unlimited backpack slots (OP) |
@@ -122,10 +123,10 @@ Backpacks are portable storage containers. Players start with a basic backpack a
 
 Waypoints are personal fast-travel points saved by the player.
 
-### Commands
+### Waypoints Commands
 
 | Command | Usage | Permission |
-|---|---|---|
+| --- | --- | --- |
 | `/waypoint create <name>` | Create a waypoint | `nexusslime.essentials.waypoint` |
 | `/waypoint delete <name>` | Delete a waypoint | `nexusslime.essentials.waypoint` |
 | `/waypoint list` | List all waypoints | `nexusslime.essentials.waypoint` |
@@ -137,7 +138,7 @@ Aliases: `/wp`
 ### Slot Limit Permissions
 
 | Permission | Slots |
-|---|---|
+| --- | --- |
 | `nexusslime.essentials.waypoints.1` | 1 (default) |
 | `nexusslime.essentials.waypoints.5` | 5 |
 | `nexusslime.essentials.waypoints.25` | 25 |
@@ -148,7 +149,7 @@ Aliases: `/wp`
 ## Main Plugin Commands
 
 | Command | Usage | Permission |
-|---|---|---|
+| --- | --- | --- |
 | `/nexusslime help` | Show help | `nexusslime.command` |
 | `/nexusslime info` | Plugin info | `nexusslime.command` |
 | `/nexusslime reload` | Reload all configs | `nexusslime.admin.reload` |
@@ -169,13 +170,14 @@ Aliases: `/ns`, `/nexus`, `/slime`, `/nslime`
 NexusSlime ships with four language files:
 
 | File | Language |
-|---|---|
+| --- | --- |
 | `lang/en_US.yml` | English (default) |
 | `lang/pt_BR.yml` | Brazilian Portuguese |
 | `lang/es_ES.yml` | Spanish |
 | `lang/zh_CN.yml` | Chinese (Simplified) |
 
 Set the active language in `config.yml`:
+
 ```yaml
 settings:
   language: en_US

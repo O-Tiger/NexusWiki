@@ -5,7 +5,7 @@ NexusSlime is organized into **13 feature modules**, each handling a distinct ga
 ---
 
 | Module | Description |
-|---|---|
+| --- | --- |
 | [Core](core.md) | Custom items, PDC system, item registry, backpacks, waypoints |
 | [Essentials](essentials.md) | Homes, warps, TPA, AFK, jail, 40+ QoL commands |
 | [Economy](economy.md) | Money, credits, /sell, /worth, /baltop |

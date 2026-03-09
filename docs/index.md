@@ -86,9 +86,9 @@ NexusSlime
 
 ---
 
-## Authors
+## Author
 
-NexusSlime is developed by **O-Tiger**, **8-byte**, and **HexNode**.
+NexusSlime is developed by **O-Tiger**
 
 - API version: `1.21`
 - Soft dependencies: `PlaceholderAPI`, `LuckPerms`, `SkinsRestorer`
