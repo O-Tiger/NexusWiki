@@ -8,7 +8,7 @@ All notable changes to NexusSlime are documented here. NexusSlime follows [Seman
 
 ### Architecture
 
-- Complete rewrite as a **27-module Maven multi-module project**
+- Complete rewrite as a **+25-module Maven multi-module project**
 - New `nexusslime-api` module providing a public API for addon developers
 - All feature systems are now self-contained modules with their own lifecycle
 - Switched from YAML-only persistence to **SQLite / PostgreSQL** via `nexusslime-storage`

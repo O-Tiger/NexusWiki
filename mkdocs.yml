@@ -60,13 +60,21 @@ markdown_extensions:
       permalink: true
 
 extra:
+  alternate:
+    - name: English
+      link: /NexusSlime/
+      lang: en
+    - name: Español
+      link: /NexusSlime/es/
+      lang: es
+    - name: Português (BR)
+      link: /NexusSlime/pt-br/
+      lang: pt-BR
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/O-Tiger/NexusSlime
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/nexusslime
-  version:
-    provider: mike
+      link: https://discord.gg/invite/WgmfqwPcnS
 
 nav:
   - Home: index.md

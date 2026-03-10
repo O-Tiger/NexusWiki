@@ -88,7 +88,8 @@ machines:
 
 ## Maven Modules
 
-NexusSlime is a **multi-module Maven project**. All modules are bundled into the final plugin JAR automatically.
+NexusSlime is a **multi-module Maven project**.
+All modules are bundled into the final plugin JAR automatically.
 
 | Module | Description |
 | --- | --- |
@@ -122,14 +123,98 @@ NexusSlime is a **multi-module Maven project**. All modules are bundled into the
 
 ---
 
-## Building from Source
+## Developer API (Jitpack)
 
-```bash
-git clone https://github.com/O-Tiger/NexusSlime.git
-cd NexusSlime
-mvn clean package -DskipTests
-# Output: nexusslime-plugin/target/NexusSlime-<version>.jar
+Add NexusSlime as a dependency in your addon or plugin using [Jitpack](https://jitpack.io/#O-Tiger/NexusSlime).
+
+!!! info "API-only dependency"
+    Depend on `nexusslime-api`, not `nexusslime-plugin`, to avoid pulling the full implementation into your project. Mark it as `provided` — the plugin JAR is already on the server at runtime.
+
+=== "Maven"
+
+    ```xml
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.O-Tiger.NexusSlime</groupId>
+            <artifactId>nexusslime-api</artifactId>
+            <version>TAG</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    ```
+
+=== "Gradle (Kotlin DSL)"
+
+    ```kotlin
+    repositories {
+        maven("https://jitpack.io")
+    }
+
+    dependencies {
+        compileOnly("com.github.O-Tiger.NexusSlime:nexusslime-api:TAG")
+    }
+    ```
+
+=== "Gradle (Groovy)"
+
+    ```groovy
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        compileOnly 'com.github.O-Tiger.NexusSlime:nexusslime-api:TAG'
+    }
+    ```
+
+Replace `TAG` with the release version (e.g. `2.0.0-BETA`) or a commit hash for snapshots.
+
+### `plugin.yml` dependency
+
+Declare NexusSlime as a soft or hard dependency in your addon's `plugin.yml`:
+
+```yaml
+# Hard dependency — your plugin won't load without NexusSlime
+depend: [NexusSlime]
+
+# Soft dependency — loads after NexusSlime if present
+softdepend: [NexusSlime]
 ```
+
+### Using the API
+
+```java
+import io.github.otiger.nexusslime.api.NexusSlimeAPI;
+import io.github.otiger.nexusslime.api.items.NexusItem;
+
+public class MyAddon extends JavaPlugin {
+
+    @Override
+    public void onEnable() {
+        NexusSlimeAPI api = NexusSlimeAPI.getInstance();
+
+        // Access the item registry
+        api.getItemRegistry().getItem("COPPER_DUST").ifPresent(item -> {
+            getLogger().info("Found item: " + item.getId());
+        });
+
+        // Check territory at a location
+        api.getTerritoryRegistry().getTerritory(someLocation).ifPresent(territory -> {
+            getLogger().info("Location owned by: " + territory.getOwner());
+        });
+    }
+}
+```
+
+!!! tip "Uploading to Jitpack"
+    Push a tagged release to GitHub, then visit `https://jitpack.io/#O-Tiger/NexusSlime` and click **Look up** next to your tag to trigger the build. Once green, the dependency is ready to use.
 
 ---
 

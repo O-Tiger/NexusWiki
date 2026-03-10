@@ -2,7 +2,8 @@
 
 > **A comprehensive reimplementation and evolution of Slimefun4** — next-generation tech, magic, and quality-of-life systems for Minecraft servers.
 
-NexusSlime is a modular Spigot plugin built on a 27-module Maven architecture. It brings custom items, machines, energy networks, clans, economy, minigames, and deep integrations all under a single, lightweight plugin JAR.
+NexusSlime is a modular Spigot plugin built on a +25-module Maven architecture.
+It brings custom items, machines, energy networks, clans, economy, minigames, and deep integrations all under a single, lightweight plugin JAR.
 
 ---
 
@@ -29,7 +30,7 @@ NexusSlime is a modular Spigot plugin built on a 27-module Maven architecture. I
 
 ## Module Overview
 
-```c#
+```text
 NexusSlime
 ├── nexusslime-api          Public API for addon developers
 ├── nexusslime-core         Core managers, PDC registry, language
@@ -64,25 +65,14 @@ NexusSlime
 
 ## Quick Navigation
 
-- 🚀 **[Getting Started](getting-started.md)**
-  Installation, requirements, and first steps
-
-- ⚙️ **[Core Module](modules/core.md)**
-  Items, PDC system, custom item registry
-
-- ⚔️ **[All Modules](modules/index.md)**
-  Browse all 13 feature modules
-
-- 📝 **[Commands Reference](reference/commands.md)**
-  All 40+ commands with usage and permissions
-
-- 🗝️ **[Permissions Reference](reference/permissions.md)**
-  Complete permission node list
-
-- 📄 **[PlaceholderAPI](reference/placeholders.md)**
-  All `%nexusslime_*%` placeholders
-
-</div>
+| | |
+| --- | --- |
+| **[Getting Started](getting-started.md)** | Installation, requirements, and first steps |
+| **[Core Module](modules/core.md)** | Items, PDC system, custom item registry |
+| **[All Modules](modules/index.md)** | Browse all 13 feature modules |
+| **[Commands Reference](reference/commands.md)** | All 40+ commands with usage and permissions |
+| **[Permissions Reference](reference/permissions.md)** | Complete permission node list |
+| **[PlaceholderAPI](reference/placeholders.md)** | All `%nexusslime_*%` placeholders |
 
 ---
 
