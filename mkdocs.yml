@@ -1,9 +1,9 @@
 site_name: NexusSlime Wiki
 site_description: Comprehensive documentation for the NexusSlime Minecraft plugin
 site_author: O-Tiger
-site_url: https://o-tiger.github.io/NexusSlime/
-repo_url: https://github.com/O-Tiger/NexusSlime
-repo_name: O-Tiger/NexusSlime
+site_url: https://o-tiger.github.io/NexusWiki/
+repo_url: https://github.com/O-Tiger/NexusWiki
+repo_name: O-Tiger/NexusWiki
 edit_uri: edit/main/docs/
 
 theme:
@@ -42,6 +42,65 @@ theme:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: pt
+          name: Português (BR)
+          build: true
+          nav_translations:
+            Home: Início
+            Getting Started: Primeiros Passos
+            Modules: Módulos
+            Core: Core
+            Essentials: Essenciais
+            Economy: Economia
+            Clans: Clãs
+            Security: Segurança
+            Discord: Discord
+            Crystal Defense: Crystal Defense
+            Votifier: Votifier
+            Dreams: Sonhos
+            Protections: Proteções
+            Custom Mobs: Mobs Personalizados
+            Infinity Crafting: Crafting Infinito
+            Twitch Integration: Integração Twitch
+            Reference: Referência
+            PlaceholderAPI: PlaceholderAPI
+            Permissions: Permissões
+            Commands: Comandos
+            Store: Loja
+            Changelog: Histórico
+        - locale: es
+          name: Español
+          build: true
+          nav_translations:
+            Home: Inicio
+            Getting Started: Primeros Pasos
+            Modules: Módulos
+            Core: Core
+            Essentials: Esenciales
+            Economy: Economía
+            Clans: Clanes
+            Security: Seguridad
+            Discord: Discord
+            Crystal Defense: Crystal Defense
+            Votifier: Votifier
+            Dreams: Sueños
+            Protections: Protecciones
+            Custom Mobs: Mobs Personalizados
+            Infinity Crafting: Crafteo Infinito
+            Twitch Integration: Integración Twitch
+            Reference: Referencia
+            PlaceholderAPI: PlaceholderAPI
+            Permissions: Permisos
+            Commands: Comandos
+            Store: Tienda
+            Changelog: Historial
 
 markdown_extensions:
   - admonition
@@ -60,19 +119,9 @@ markdown_extensions:
       permalink: true
 
 extra:
-  alternate:
-    - name: English
-      link: /NexusSlime/
-      lang: en
-    - name: Español
-      link: /NexusSlime/es/
-      lang: es
-    - name: Português (BR)
-      link: /NexusSlime/pt-br/
-      lang: pt-BR
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/O-Tiger/NexusSlime
+      link: https://github.com/O-Tiger/NexusWiki
     - icon: fontawesome/brands/discord
       link: https://discord.gg/invite/WgmfqwPcnS
 

@@ -126,6 +126,7 @@ All modules are bundled into the final plugin JAR automatically.
 ## Developer API (Jitpack)
 
 Add NexusSlime as a dependency in your addon or plugin using [Jitpack](https://jitpack.io/#O-Tiger/NexusSlime).
+Jitpack status badge: [![](https://jitpack.io/v/O-Tiger/NexusSlime.svg)](https://jitpack.io/#O-Tiger/NexusSlime)
 
 !!! info "API-only dependency"
     Depend on `nexusslime-api`, not `nexusslime-plugin`, to avoid pulling the full implementation into your project. Mark it as `provided` — the plugin JAR is already on the server at runtime.
