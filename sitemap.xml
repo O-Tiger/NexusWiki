@@ -1,87 +1,507 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/changelog/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/changelog/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/changelog/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/changelog/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/changelog/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/getting-started/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/getting-started/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/getting-started/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/store/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/store/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/store/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/store/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/store/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/clans/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/clans/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/clans/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/clans/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/clans/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/core/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/core/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/core/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/core/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/core/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/crystal-defense/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/crystal-defense/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/crystal-defense/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/crystal-defense/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/crystal-defense/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/custom-mobs/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/custom-mobs/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/custom-mobs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/custom-mobs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/custom-mobs/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/discord/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/discord/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/discord/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/discord/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/discord/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/dreams/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/dreams/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/dreams/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/dreams/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/dreams/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/economy/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/economy/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/economy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/economy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/economy/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/essentials/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/essentials/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/essentials/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/essentials/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/essentials/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/infinity-crafting/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/infinity-crafting/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/infinity-crafting/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/infinity-crafting/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/infinity-crafting/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/protections/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/protections/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/protections/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/protections/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/protections/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/security/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/security/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/security/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/security/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/security/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/twitch/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/twitch/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/twitch/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/twitch/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/twitch/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/modules/votifier/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/modules/votifier/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/votifier/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/votifier/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/votifier/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/reference/commands/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/reference/commands/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/commands/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/commands/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/commands/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/reference/permissions/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/reference/permissions/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/permissions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/permissions/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/permissions/"/>
     </url>
     <url>
-         <loc>https://o-tiger.github.io/NexusSlime/reference/placeholders/</loc>
-         <lastmod>2026-03-10</lastmod>
+        <loc>https://o-tiger.github.io/NexusSlime/reference/placeholders/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/placeholders/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/placeholders/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/placeholders/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/changelog/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/changelog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/changelog/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/changelog/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/getting-started/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/store/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/store/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/store/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/store/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/clans/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/clans/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/clans/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/clans/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/core/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/core/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/core/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/core/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/crystal-defense/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/crystal-defense/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/crystal-defense/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/crystal-defense/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/custom-mobs/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/custom-mobs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/custom-mobs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/custom-mobs/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/discord/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/discord/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/discord/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/discord/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/dreams/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/dreams/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/dreams/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/dreams/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/economy/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/economy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/economy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/economy/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/essentials/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/essentials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/essentials/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/essentials/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/infinity-crafting/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/infinity-crafting/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/infinity-crafting/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/infinity-crafting/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/protections/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/protections/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/protections/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/protections/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/security/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/security/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/security/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/security/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/twitch/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/twitch/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/twitch/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/twitch/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/modules/votifier/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/votifier/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/votifier/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/votifier/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/reference/commands/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/commands/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/commands/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/commands/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/reference/permissions/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/permissions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/permissions/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/permissions/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/pt/reference/placeholders/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/placeholders/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/placeholders/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/placeholders/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/changelog/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/changelog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/changelog/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/changelog/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/getting-started/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/store/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/store/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/store/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/store/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/clans/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/clans/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/clans/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/clans/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/core/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/core/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/core/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/core/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/crystal-defense/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/crystal-defense/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/crystal-defense/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/crystal-defense/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/custom-mobs/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/custom-mobs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/custom-mobs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/custom-mobs/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/discord/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/discord/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/discord/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/discord/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/dreams/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/dreams/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/dreams/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/dreams/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/economy/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/economy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/economy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/economy/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/essentials/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/essentials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/essentials/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/essentials/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/infinity-crafting/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/infinity-crafting/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/infinity-crafting/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/infinity-crafting/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/protections/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/protections/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/protections/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/protections/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/security/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/security/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/security/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/security/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/twitch/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/twitch/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/twitch/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/twitch/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/modules/votifier/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/modules/votifier/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/modules/votifier/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/modules/votifier/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/reference/commands/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/commands/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/commands/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/commands/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/reference/permissions/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/permissions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/permissions/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/permissions/"/>
+    </url>
+    <url>
+        <loc>https://o-tiger.github.io/NexusSlime/es/reference/placeholders/</loc>
+        <lastmod>2026-03-15</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://o-tiger.github.io/NexusSlime/es/reference/placeholders/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://o-tiger.github.io/NexusSlime/reference/placeholders/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://o-tiger.github.io/NexusSlime/pt/reference/placeholders/"/>
     </url>
 </urlset>
