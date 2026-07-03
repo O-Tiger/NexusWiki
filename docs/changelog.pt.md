@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-07-03] · `ef78584`
+
+
+### 🔧Manutenção
+
+- **ci**: Etapa de remoção de activate_items movida para NexusATS
+
+---
+
 ## [2026-07-03] · `2786877`
 
 

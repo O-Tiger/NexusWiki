@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-07-03] · `ef78584`
+
+
+### 🔧Mantenimiento
+
+- **ci**: Eliminar el paso validar_items movido a NexusATS
+
+---
+
 ## [2026-07-03] · `2786877`
 
 

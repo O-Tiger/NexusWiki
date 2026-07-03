@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-07-03] · `ef78584`
+
+
+### 🔧 Maintenance
+
+- **ci**: Remove validate_items step moved to NexusATS
+
+---
+
 ## [2026-07-03] · `2786877`
 
 
