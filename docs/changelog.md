@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-07-03] · `2786877`
+
+
+### ♻️ Changed
+
+- **events**: Rename Sacrifice Arc to The Convergence across all lang files and code
+
+---
+
 ## [2026-06-19] · `d04c992`
 
 

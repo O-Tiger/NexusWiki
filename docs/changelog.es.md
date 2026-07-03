@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-07-03] · `2786877`
+
+
+### ♻️ Modificado
+
+- **events**: Cambie el nombre de Sacrifice Arc a The Convergence en todos los archivos y códigos de idiomas
+
+---
+
 ## [2026-06-19] · `d04c992`
 
 
