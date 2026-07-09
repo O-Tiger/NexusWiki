@@ -4,6 +4,46 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-07-09] · `0283136`
+
+
+### ✨Añadido See More
+
+- **mmo**: Agregar superficie de gancho NexusATS (T1 cableado, terminales T2/T3)
+
+### 🐛 Corregido See More
+
+- **lang**: Elimina claves YAML duplicadas en en_US y pt_BR
+## [2026-07-06] · `32d26d9`
+
+
+### ✨Añadido See More
+
+- **discord**: Notificaciones de eliminación masiva de grupos con rebote de 1 segundo
+- **discord**: Resolución de mención bidireccional — @@ MC→Discord, # Discord→MC
+
+### 🐛 Corregido See More
+
+- **discord**: Webhook tiene prioridad para los mensajes del jugador, JDA para los mensajes del sistema: evita publicaciones duplicadas
+- **discord**: Cargar todos los miembros del gremio en la barra de acción de mención listo + arreglar
+- **mmo**: Restaurar MmoListener eliminado por error en la extracción de slimefun
+
+### ♻️ Modificado
+
+- **discord**: Elimina DiscordChatListener muerto, elimina el comentario engañoso de chat.webhookUrl
+- **discord**: Eliminar @PlayerName heredado → Resolución de mención de Discord
+
+### 📚 Documentación
+
+- **discord**: Aclarar que el canal predeterminado necesita ID de JDA para Discord → MC Relay
+
+### 🔧Mantenimiento
+
+- **config**: Eliminar secciones muertas, arreglar lista de módulos
+- **discord**: Elimina la clave de webhook de chat inactiva de key_configs.yml
+
+---
+
 ## [2026-07-03] · `ef78584`
 
 

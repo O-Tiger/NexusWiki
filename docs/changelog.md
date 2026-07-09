@@ -5,6 +5,47 @@
 
 ---
 
+## [2026-07-09] · `0283136`
+
+
+### ✨ Added
+
+- **mmo**: Add NexusATS hook surface (T1 wired, T2/T3 stubs)
+
+### 🐛 Fixed
+
+- **lang**: Remove duplicate YAML keys in en_US and pt_BR
+
+## [2026-07-06] · `32d26d9`
+
+
+### ✨ Added
+
+- **discord**: Group bulk delete notifications with 1s debounce
+- **discord**: Bidirectional mention resolution — @@ MC→Discord, # Discord→MC
+
+### 🐛 Fixed
+
+- **discord**: Webhook takes priority for player messages, JDA for system messages — prevents duplicate posts
+- **discord**: Load all guild members on ready + fix mention actionbar
+- **mmo**: Restore MmoListener deleted by mistake in slimefun extraction
+
+### ♻️ Changed
+
+- **discord**: Delete dead DiscordChatListener, remove misleading chat.webhookUrl comment
+- **discord**: Remove legacy @PlayerName→Discord mention resolution
+
+### 📚 Documentation
+
+- **discord**: Clarify default channel needs JDA id for Discord→MC relay
+
+### 🔧 Maintenance
+
+- **config**: Remove dead sections, fix module list
+- **discord**: Remove dead chat-webhook key from key_configs.yml
+
+---
+
 ## [2026-07-03] · `ef78584`
 
 
