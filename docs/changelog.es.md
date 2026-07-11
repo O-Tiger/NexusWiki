@@ -4,6 +4,21 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-07-11] · `36e78ff`
+
+
+### 🐛 Corregido See More
+
+- **waila**: Extraer formatoSnakeName para la cadena EntityType, corregir error de compilación
+## [2026-07-10] · `0d08f3e`
+
+
+### ✨Añadido See More
+
+- **waila**: Detección de entidades y coloración basada en rarezas
+
+---
+
 ## [2026-07-09] · `0283136`
 
 

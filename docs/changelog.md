@@ -5,6 +5,22 @@
 
 ---
 
+## [2026-07-11] · `36e78ff`
+
+
+### 🐛 Fixed
+
+- **waila**: Extract formatSnakeName for EntityType string, fix compile error
+
+## [2026-07-10] · `0d08f3e`
+
+
+### ✨ Added
+
+- **waila**: Entity detection and rarity-based coloring
+
+---
+
 ## [2026-07-09] · `0283136`
 
 
