@@ -5,6 +5,675 @@
 
 ---
 
+## [2026-07-11] · `36e78ff`
+
+
+### 🐛 Fixed
+
+- **waila**: Extract formatSnakeName for EntityType string, fix compile error
+
+## [2026-07-10] · `0d08f3e`
+
+
+### ✨ Added
+
+- **waila**: Entity detection and rarity-based coloring
+
+---
+
+## [2026-07-09] · `0283136`
+
+
+### ✨ Added
+
+- **mmo**: Add NexusATS hook surface (T1 wired, T2/T3 stubs)
+
+### 🐛 Fixed
+
+- **lang**: Remove duplicate YAML keys in en_US and pt_BR
+
+## [2026-07-06] · `32d26d9`
+
+
+### ✨ Added
+
+- **discord**: Group bulk delete notifications with 1s debounce
+- **discord**: Bidirectional mention resolution — @@ MC→Discord, # Discord→MC
+
+### 🐛 Fixed
+
+- **discord**: Webhook takes priority for player messages, JDA for system messages — prevents duplicate posts
+- **discord**: Load all guild members on ready + fix mention actionbar
+- **mmo**: Restore MmoListener deleted by mistake in slimefun extraction
+
+### ♻️ Changed
+
+- **discord**: Delete dead DiscordChatListener, remove misleading chat.webhookUrl comment
+- **discord**: Remove legacy @PlayerName→Discord mention resolution
+
+### 📚 Documentation
+
+- **discord**: Clarify default channel needs JDA id for Discord→MC relay
+
+### 🔧 Maintenance
+
+- **config**: Remove dead sections, fix module list
+- **discord**: Remove dead chat-webhook key from key_configs.yml
+
+---
+
+## [2026-07-03] · `ef78584`
+
+
+### 🔧 Maintenance
+
+- **ci**: Remove validate_items step moved to NexusATS
+
+---
+
+## [2026-07-03] · `2786877`
+
+
+### ♻️ Changed
+
+- **events**: Rename Sacrifice Arc to The Convergence across all lang files and code
+
+---
+
+## [2026-06-19] · `d04c992`
+
+
+### ✨ Added
+
+- **integration**: Add NexusATS hook surface for machine block and Waila wiring
+
+---
+
+## [2026-06-19] · `06bfe20`
+
+
+### ✨ Added
+
+- **waila**: Add vanilla block recognition
+
+### 🐛 Fixed
+
+- **startup**: Reduce log verbosity and fix duplicate prefix and color leaks
+- **twitch**: Stop reconnecting after 3 consecutive IRC failures
+
+### ♻️ Changed
+
+- **slimefun**: Extract machines, energy, items, ae to future NexusItems plugin
+
+## [2026-06-17] · `ce58736`
+
+
+### ✨ Added
+
+- **machines**: Add YAML-driven multiblock machine system
+
+### 🐛 Fixed
+
+- **items**: Rename bare alloy items to _INGOT suffix and remove PAPER placeholders
+
+## [2026-06-16] · `cfd4b44`
+
+
+### 🐛 Fixed
+
+- **recipes**: Shapeless ENHANCED_CRAFTING ingredients parsed as section not string list
+
+### ♻️ Changed
+
+- **machines**: Replace Enhanced Crafting Table machine block with Slimefun-style multiblock
+- **machines**: Rewrite Enhanced Crafting Table to true Slimefun-style multiblock
+
+### 🔧 Maintenance
+
+- **items**: Replace nexus:COPPER_INGOT with vanilla COPPER_INGOT
+- **items**: Fix categorization — rename raw ores, remove vanilla duplicates, fix alloy/plate matching
+- **items**: Rename DUST_AMETHYST/DUST_NETHERITE to consistent *_DUST convention
+
+## [2026-06-15] · `dd8cee0`
+
+
+### ✨ Added
+
+- **machines**: Add Enhanced Crafting Table machine and recipe system
+
+### 🐛 Fixed
+
+- **machines**: Resolve MachineCatalog ENHANCED_CRAFTING_TABLE item-entry warning
+- **machines**: Fix ENHANCED_CRAFTING_TABLE MachineCatalog warning
+
+### ♻️ Changed
+
+- **recipes**: Migrate all plugin crafting recipes to Enhanced Crafting Table
+
+## [2026-06-14] · `f52e15d`
+
+
+### 🐛 Fixed
+
+- **machines**: Resolve 3 MachineCatalog cross-layer warnings
+- **machines**: Remove duplicate HOLOGRAM_PROJECTOR stub from basic_machines.yml
+
+---
+
+## [2026-06-14] · `a434364`
+
+
+### ✨ Added
+
+- **crafting**: Add recipes for 37 previously uncraftable items
+
+### 🐛 Fixed
+
+- **items**: Move SINGULARITY_CONSTRUCTOR to nexus_machines.yml; add machine def + singularity recipes
+
+---
+
+## [2026-06-14] · `76b04ab`
+
+
+### ✨ Added
+
+- **crafting**: Add infinity recipe chain in Infinity Table
+
+### 🐛 Fixed
+
+- **events**: Register missing 6 challenge bosses in DEFAULT_BOSS_FILES
+
+### ♻️ Changed
+
+- **crafting**: Migrate infinity gear to Infinity Table; fix INFINITY_APPLE
+
+---
+
+## [2026-06-14] · `8b862fc`
+
+
+### ✨ Added
+
+- **items/tinkers**: Add TINKERS category, migrate 137 CAST items, fix INGOT_FORMER to MACHINE
+- **tools,ci**: Add validate_items.py (CMD conflicts + category rules) and wire into CI
+
+### 🐛 Fixed
+
+- **mmo**: Guard null customName() before ConcurrentHashMap.putIfAbsent in MobHealthDisplay
+
+### ♻️ Changed
+
+- **lang**: Rename security.world-cleaner lang keys and sync lang files
+- **events/challenge**: Add display CMDs to boss YAMLs, update ChallengeBoss classes
+- **items/cobblestone**: Replace 5-tier COMPRESSED_COBBLESTONE with 8 explicit items (x9..x43M), remove COBBLE_1-5 duplicates and stale machine GUIs
+
+### 🔧 Maintenance
+
+- **tools**: Remove stale rp_prompts artifacts, allow tools/*.py in gitignore
+- **items**: Assign missing CMDs to ITEM_BAND and NETWORK_POWER_DISPLAY variants in gear.yml
+
+## [2026-06-09] · `ca942b3`
+
+
+### 🐛 Fixed
+
+- **events**: Rename challenge_bosses JAR resource dir (was anime_bosses)
+- **energy,ae**: Consumer bridge + ME terminal insert feedback
+
+### ♻️ Changed
+
+- **lang**: Migrate hardcoded messages to lang keys (batch 1)
+- **lang**: Migrate nexusprism-plugin hardcoded strings to lang keys
+- **lang**: Replace all § literals with & in lang files
+- **lang**: Migrate remaining nexusprism-plugin strings to lang keys
+- **lang**: Migrate strings in events/mmo/rng/security/discord/quests to lang keys
+- **lang**: Migrate remaining § strings in chat/core/crates/mmo/machines/enchants to lang keys and ChatColor
+
+## [2026-06-08] · `d1b12d2`
+
+
+### ✨ Added
+
+- **items,ae**: Hammer tiers, AE2 byte capacity, ME persistence fix
+- **vfx,mmo,crates**: VFXUtil, mob health nameplates, ability VFX, crate VFX
+
+### 🐛 Fixed
+
+- **machines**: Exempt energy infrastructure from catalog GUI-layer check
+- **ae,gui,energy**: AE status lang keys, colorize GUI lore, creative gen buffer
+- **ae,gui,commands**: Glass cable channels, creative GUIs, give tab-completion
+- **ae**: Controller provides 8 base channels so cable-less networks work
+- **mmo**: Fix action bar conflict between HUD and XP notification
+
+### ♻️ Changed
+
+- **display**: Centralize action bar through ActionBarManager
+- **events**: Rename anime package and classes to challenge
+- **events**: Finish anime→challenge rename across docs, lang, and resources
+
+### 🔧 Maintenance
+
+- **cleanup**: Delete archived copies and remove stale CUT banners
+- **cleanup**: Remove remaining stale CUT banners and update example/crates
+
+## [2026-06-07] · `c2888ce`
+
+
+### 🐛 Fixed
+
+- **machines**: Skip template/fields keys in loader; drop obsolete generated items file
+- **items**: Propagate placeable via templates + prune duplicate generated machine items
+- **machines**: Add CREATIVE_CAPACITOR STORAGE behavior def
+- **machines**: Add ADVANCED generators + ELECTRIC_BLAST_FURNACE, align FAL/MOB ids
+
+## [2026-06-06] · `e7a40f7`
+
+
+### ✨ Added
+
+- **api**: Rebuild item/machine/recipe API surface
+- **core**: PDC-backed MachineManager + item registry/resolvers
+- **machines**: Typed engine, registry, definitions, loader + catalog validator
+- **ae**: Rebuild ME network as MachineContext-driven machines
+- **storage**: Persist machine placements via DataManager (SQLite/MySQL/YAML)
+- **machines**: Plugin glue, split listeners, GUI handler, loaders, wiring
+- **recipes**: Migrate ME network, storage cell + backpack crafting to YAML
+- **machines**: Make every machine obtainable + give type-based GUIs
+- **energy**: Infinite CREATIVE_CAPACITOR + only tick engine-handled blocks
+- **energy**: Bridge engine generators into cable network + export-mode toggle
+
+### 🐛 Fixed
+
+- **machines**: Rename CRUSHER gui key to ORE_CRUSHER; dedup CREATIVE_CAPACITOR
+- **items**: Merge stray CREATIVE_GENERATOR_BLOCK into CREATIVE_GENERATOR
+
+### ♻️ Changed
+
+- **energy,mmo,systems,items**: Rewire consumers to new item/machine API
+- **machines**: Merge generated items into machine_blocks + subtype-aware GUIs
+
+### 📚 Documentation
+
+- **recipes**: Document hardcoded RecipeLoader to YAML migration gaps
+- **recipes**: Mark ME/storage-cell/backpack recipes as migrated
+
+### 🔧 Maintenance
+
+- Updated gitignore
+
+## [2026-06-04] · `6256f98`
+
+
+### 🔧 Maintenance
+
+- **machines,items**: Archive item/machine/ME Java (no delete) + stub consumers
+
+## [2026-06-03] · `7213cc6`
+
+
+### ✨ Added
+
+- **waila**: Live machine stats in HUD via shared engine (Bug 5)
+
+### 🐛 Fixed
+
+- **machines**: Break drops custom machine item, not the vanilla block
+- **machines**: Persist placements so machines survive restart (Bug 3)
+- **machines**: Single shared engine ticks all machines (Bug 4)
+
+### ♻️ Changed
+
+- **machines**: Typed MachineContext + split listeners (Section 10 rewrite)
+
+---
+
+## [2026-06-03] · `6d5654a`
+
+
+### ✨ Added
+
+- **events**: Per-Challenger Groq title on boss spawn
+- **vip**: Align in-game VIP kits with webstore tiers + wire delivery
+- **ae**: ME networks now actually require energy
+- **items**: Add TOOLS item category + SubCategoryMatcher updates
+
+### 🐛 Fixed
+
+- **ae**: ME system non-functional — uppercase block IDs + non-functional materials
+- **data**: Consolidate QUANTUM_STORAGE_CELL id + fix TOME_OF_ENLIGHTENMENT + boss msg
+
+### 🔧 Maintenance
+
+- **lang**: Rename Sacrifice Arc -> Challenge Arc, Anime Boss -> Challenger from Beyond
+
+## [2026-06-02] · `3ac9c37`
+
+
+### ✨ Added
+
+- **twitch**: In-game visual feedback for sub/cheer/raid events
+- **machines**: MachineComponent registry for per-machine-ID behavior override
+- SimpleXPBoosts-style global XP boost system
+- **items**: ExecutableItems-style trigger/action behavior
+- **items**: /itemedit live item editor (ItemEdit-inspired)
+- **mmo**: Capture-mode keybinding — press a key to bind an ability
+- **events**: Actually grant MMO bonuses on Sacrifice reward
+
+### 🐛 Fixed
+
+- **items**: Remove duplicate ME_NETWORK_ACCESS_TERMINAL definition
+- **advancements**: 1.21 datapack folder rename + version-aware extraction
+- **gui**: StatsGUI/KeyBindGUI crashes, questnpc UX, command-center guide prefix
+
+### 🔧 Maintenance
+
+- Gitignore /inspirations reference plugin folder
+
+---
+
+## [2026-06-02] · `d2ba3e7`
+
+
+### ✨ Added
+
+- **discord**: Role bonus combat system
+- ConfigMigrator auto-merge + MySQL migration command (Phase 3)
+- **mmo**: AuraSkills-inspired GUI redesign + attack cooldown HUD
+- **essentials**: Staff vanish + playtime milestone rewards
+
+### 🐛 Fixed
+
+- ME CMD conflicts, missing NETWORK_CAPACITOR items, recipe IDs, keybind executor, circuits.yml
+
+### ♻️ Changed
+
+- **ae**: Redesign ME Terminal/Drive GUIs + fix critical bugs
+
+---
+
+## [2026-06-02] · `19ac7e8`
+
+
+### 🐛 Fixed
+
+- Jobs NPE + leave UX, ME items, keybind command, command center args
+
+## [2026-06-01] · `f0cc6ca`
+
+
+### ✨ Added
+
+- **mmo**: Per-item weapon damage system with projectile tracking
+- **advancements**: Custom advancement system via datapack + plugin triggers
+
+---
+
+## [2026-06-01] · `b86702c`
+
+
+### ✨ Added
+
+- **quests**: Add quest system, NPC givers, command center GUI, and keybind expansion
+- **discord**: Discord bot and integration updates
+- **energy**: Add creative generator component
+
+### ♻️ Changed
+
+- **core**: Migrate plugin resources to data/ subfolder
+
+### 🔧 Maintenance
+
+- Module-wide GUI, MMO, economy, and misc improvements
+- Remove stale junk files, update gitignore, and update CHANGELOG
+
+---
+
+## [2026-05-29] · `1985014`
+
+
+### 🐛 Fixed
+
+- **ci**: Force PT-BR in Groq prompt, strip surrounding quotes from response
+
+---
+
+## [2026-05-29] · `7fcaa1d`
+
+
+### 🐛 Fixed
+
+- **ci**: AI message in Portuguese, move to content above embed with Discord heading format
+
+---
+
+## [2026-05-29] · `3d42824`
+
+
+### 🐛 Fixed
+
+- **discord**: Messages.yml saved to wrong path, causing all keys to return [Missing message]
+
+---
+
+## [2026-05-29] · `8709b16`
+
+
+### ✨ Added
+
+- **ci**: AI-generated message via Groq on Discord build notifications
+
+---
+
+## [2026-05-29] · `8ba64aa`
+
+
+### 🔧 Maintenance
+
+- **ci**: Random robot avatar per build on Discord notifications
+
+---
+
+## [2026-05-29] · `6b528c3`
+
+
+### 🐛 Fixed
+
+- **ci**: Run tests in CI, remove redundant build workflow, group changelog by commit type
+
+---
+
+## [2026-05-28] · `b3be732`
+
+
+### 🐛 Fixed
+
+- **machines-gui**: Extract machines-gui.yml to data folder on startup
+
+---
+
+## [2026-05-28] · `329fd92`
+
+
+### 🐛 Fixed
+
+- **gui**: Guide navigation, recipe layout, pagination range
+
+---
+
+## [2026-05-28] · `ec4b039`
+
+
+### ✨ Added
+
+- **api**: Expose placeable/multiblock fields, add VariantDefinition, fix machine type ref
+- **machines**: Add tiers auto-expansion and processing-subtype to machine loader
+- **plugin**: Phase 7 — multiblock bridge, DataDriven loader updates, recipe ID renames
+
+### 🐛 Fixed
+
+- **plugin**: Give command shows display names, break-message toggle, API impl logging
+
+### 🔧 Maintenance
+
+- **items**: Phase 6 — mass _BLOCK rename, native machine cleanup, variant-defaults
+- **plugin**: Lang/config updates — multiblock messages, break-message toggle, economy defaults
+- **modules**: Updates across economy, mmo, security, events, gui, traits, discord, web, ss, tab
+- **ops**: Fail2ban filters and firewall rules for malformed packet and attacker blocking
+
+## [2026-05-23] · `5cc6c1c`
+
+
+### ✨ Added
+
+- **tab**: Add /nexus scoreboard toggle per-player command
+
+## [2026-05-22] · `70a3df5`
+
+
+### ✨ Added
+
+- **guide**: Phase 4 complete — bulk recategorize 404 items + delete 10 corrupted IDs
+- **machines**: Add processing-subtype field to MachineDefinition
+
+### 🐛 Fixed
+
+- **gui**: Recipe layout disorder + raw color code in title
+- **guide**: Expand category slots to 28 and add pagination
+
+### 🔧 Maintenance
+
+- **items**: Delete 31 legacy SV_* and camelCase slime duplicates
+- **guide**: Delete 4 legacy Slimefun stub items + add 15 missing category icons
+
+---
+
+## [2026-05-22] · `3ceeabf`
+
+
+### ✨ Added
+
+- **gui**: Add type-specific machine GUIs and wire dispatch
+
+### 🐛 Fixed
+
+- **gui**: Prevent item theft from skill/trait GUIs via open→register order
+
+### ♻️ Changed
+
+- **items**: Rename wrench + infinity_crafting_* IDs to uppercase
+- **items**: Propagate nexus_crafting_node → NEXUS_CRAFTING_NODE rename
+
+### 🔧 Maintenance
+
+- **items**: Delete 85 legacy/duplicate YAML items (Phase 1)
+- **items**: Rename nexus_crafting_node_block → NEXUS_CRAFTING_NODE_BLOCK
+
+---
+
+## [2026-05-22] · `4172dec`
+
+
+### ✨ Added
+
+- **modules**: Per-module enable/disable toggles via config.yml and GUI
+
+---
+
+## [2026-05-21] · `208b215`
+
+
+### 🐛 Fixed
+
+- **ci**: Pass GH_PAT as token input to action-gh-release
+
+---
+
+## [2026-05-21] · `a43cc50`
+
+
+### 🐛 Fixed
+
+- **ci**: Use GH_PAT for release creation (GITHUB_TOKEN has no org write access)
+
+---
+
+## [2026-05-21] · `69ac4f3`
+
+
+### 🐛 Fixed
+
+- **ci**: Pass changelog through env var to avoid bash syntax errors
+
+---
+
+## [2026-05-21] · `cf363dd`
+
+
+### 🐛 Fixed
+
+- **ci**: Fix 403 push, bad action versions, and wrong branch triggers
+
+---
+
+## [2026-05-21] · `e488545`
+
+
+### 🔧 Maintenance
+
+- Removed BOM on the start of file
+
+---
+
+## [2026-05-21] · `2f25103`
+
+
+### ✨ Added
+
+- **plugin**: Phase 2 NexusLynxReporter — push heartbeat/logs/config to Railway
+- **reporter**: REDACT filter + configurable log/alert levels
+- **anti-dupe**: Block-break dupe prevention across rng/mmo/traits
+
+### 🐛 Fixed
+
+- **reporter**: Extend REDACT filter to cover JDBC connection URLs
+- **discord**: Translate server status messages to Portuguese
+
+### ♻️ Changed
+
+- **config**: Centralize all secrets in key_configs.yml
+- **reporter**: Remove per-key filter from pushConfig — key_configs.yml is the only skipped file
+- **config**: Key_configs.yml holds secrets only — non-sensitive keys moved to module files
+
+---
+
+## [2026-05-14] · `bab3917`
+
+
+### ✨ Added
+
+- **i18n**: Wire LanguageManager into security, protections, clans modules
+- **i18n**: Wire LanguageManager into MachineManager, SilkSpawners, Twitch; add all new lang keys to 4 locales
+- **i18n**: Migrate gui/mmo/web/ae/energy/essentials/protections to LanguageManager
+
+## [2026-05-13] · `3cfce4c`
+
+
+### ✨ Added
+
+- **i18n**: Wire TagGUI/RtpWorldGUI to LanguageManager + add LanguageSelectGUI
+
+---
+
+## [2026-05-13] · `2201b42`
+
+
+### 📚 Documentation
+
+- **config**: Annotate key_configs.yml with source env var for each key
+
+---
+
 ## [2026-05-13] · `191f461`
 
 

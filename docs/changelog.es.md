@@ -4,6 +4,658 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-07-11] · `36e78ff`
+
+
+### 🐛 Corregido See More
+
+- **waila**: Extraer formatoSnakeName para la cadena EntityType, corregir error de compilación
+## [2026-07-10] · `0d08f3e`
+
+
+### ✨Añadido See More
+
+- **waila**: Detección de entidades y coloración basada en rarezas
+
+---
+
+## [2026-07-09] · `0283136`
+
+
+### ✨Añadido See More
+
+- **mmo**: Agregar superficie de gancho NexusATS (T1 cableado, terminales T2/T3)
+
+### 🐛 Corregido See More
+
+- **lang**: Elimina claves YAML duplicadas en en_US y pt_BR
+## [2026-07-06] · `32d26d9`
+
+
+### ✨Añadido See More
+
+- **discord**: Notificaciones de eliminación masiva de grupos con rebote de 1 segundo
+- **discord**: Resolución de mención bidireccional — @@ MC→Discord, # Discord→MC
+
+### 🐛 Corregido See More
+
+- **discord**: Webhook tiene prioridad para los mensajes del jugador, JDA para los mensajes del sistema: evita publicaciones duplicadas
+- **discord**: Cargar todos los miembros del gremio en la barra de acción de mención listo + arreglar
+- **mmo**: Restaurar MmoListener eliminado por error en la extracción de slimefun
+
+### ♻️ Modificado
+
+- **discord**: Elimina DiscordChatListener muerto, elimina el comentario engañoso de chat.webhookUrl
+- **discord**: Eliminar @PlayerName heredado → Resolución de mención de Discord
+
+### 📚 Documentación
+
+- **discord**: Aclarar que el canal predeterminado necesita ID de JDA para Discord → MC Relay
+
+### 🔧Mantenimiento
+
+- **config**: Eliminar secciones muertas, arreglar lista de módulos
+- **discord**: Elimina la clave de webhook de chat inactiva de key_configs.yml
+
+---
+
+## [2026-07-03] · `ef78584`
+
+
+### 🔧Mantenimiento
+
+- **ci**: Eliminar el paso validar_items movido a NexusATS
+
+---
+
+## [2026-07-03] · `2786877`
+
+
+### ♻️ Modificado
+
+- **events**: Cambie el nombre de Sacrifice Arc a The Convergence en todos los archivos y códigos de idiomas
+
+---
+
+## [2026-06-19] · `d04c992`
+
+
+### ✨Añadido See More
+
+- **integration**: Agregue una superficie de gancho NexusATS para el bloque de la máquina y el cableado Waila
+
+---
+
+## [2026-06-19] · `06bfe20`
+
+
+### ✨Añadido See More
+
+- **waila**: Agregar reconocimiento de bloque básico
+
+### 🐛 Corregido See More
+
+- **startup**: Reduce la verbosidad del registro y corrige prefijos duplicados y fugas de color.
+- **twitch**: Deja de reconectarse después de 3 fallas de IRC consecutivas
+
+### ♻️ Modificado
+
+- **slimefun**: Extraiga máquinas, energía, elementos y elementos para el futuro complemento NexusItems.
+## [2026-06-17] · `ce58736`
+
+
+### ✨Añadido See More
+
+- **machines**: Agregar sistema de máquina multibloque impulsado por YAML
+
+### 🐛 Corregido See More
+
+- **items**: Cambie el nombre de los elementos de aleación simple al sufijo _INGOT y elimine los marcadores de posición de PAPEL
+## [2026-06-16] · `cfd4b44`
+
+
+### 🐛 Corregido See More
+
+- **recipes**: Ingredientes ENHANCED_CRAFTING sin forma analizados como sección, no como lista de cadenas
+
+### ♻️ Modificado
+
+- **machines**: Reemplace el bloque de máquina de la Mesa de elaboración mejorada con un multibloque estilo Slimefun
+- **machines**: Reescribe la mesa de elaboración mejorada en un verdadero multibloque estilo Slimefun
+
+### 🔧Mantenimiento
+
+- **items**: Reemplazar nexo:COPPER_INGOT con vainilla COPPER_INGOT
+- **items**: Arreglar la categorización: cambiar el nombre de los minerales en bruto, eliminar duplicados de vainilla, arreglar la coincidencia de aleación/placa
+- **items**: Cambie el nombre de DUST_AMETHYST/DUST_NETHERITE a una convención *_DUST consistente
+## [2026-06-15] · `dd8cee0`
+
+
+### ✨Añadido See More
+
+- **machines**: Agregar máquina de mesa de elaboración y sistema de recetas mejorados
+
+### 🐛 Corregido See More
+
+- **machines**: Resolve MachineCatalog ENHANCED_CRAFTING_TABLE advertencia de entrada de elemento
+- **machines**: Corrige la advertencia ENHANCED_CRAFTING_TABLE MachineCatalog
+
+### ♻️ Modificado
+
+- **recipes**: Migre todas las recetas de creación de complementos a la tabla de creación mejorada
+## [2026-06-14] · `f52e15d`
+
+
+### 🐛 Corregido See More
+
+- **machines**: Resolve 3 advertencias entre capas de MachineCatalog
+- **machines**: Elimina el código auxiliar HOLOGRAM_PROJECTOR duplicado de basic_machines.yml
+
+---
+
+## [2026-06-14] · `a434364`
+
+
+### ✨Añadido See More
+
+- **crafting**: Agrega recetas para 37 elementos que antes no se podían crear
+
+### 🐛 Corregido See More
+
+- **items**: Mover SINGULARITY_CONSTRUCTOR a nexus_machines.yml; agregar definición de máquina + recetas de singularidad
+
+---
+
+## [2026-06-14] · `76b04ab`
+
+
+### ✨Añadido See More
+
+- **crafting**: Agregar cadena de recetas infinita en Infinity Table
+
+### 🐛 Corregido See More
+
+- **events**: Registra los 6 jefes de desafío que faltan en DEFAULT_BOSS_FILES
+
+### ♻️ Modificado
+
+- **crafting**: Migrar equipo infinito a Infinity Table; arreglar INFINITY_APPLE
+
+---
+
+## [2026-06-14] · `8b862fc`
+
+
+### ✨Añadido See More
+
+- **items/tinkers**: Agregue la categoría TINKERS, migre 137 elementos CAST, corrija INGOT_FORMER a MACHINE
+- **tools,ci**: Agregue validar_items.py (conflictos CMD + reglas de categoría) y conéctelo a CI
+
+### 🐛 Corregido See More
+
+- **mmo**: Guard null customName() antes de ConcurrentHashMap.putIfAbsent en MobHealthDisplay
+
+### ♻️ Modificado
+
+- **lang**: Cambie el nombre de las claves de idioma de security.world-cleaner y sincronice los archivos de idioma
+- **events/challenge**: Agregue CMD de visualización a los YAML del jefe, actualice las clases de ChallengeBoss
+- **items/cobblestone**: Reemplace COMPRESSED_COBBLESTONE de 5 niveles con 8 elementos explícitos (x9..x43M), elimine COBBLE_1-5 duplicados y GUI de máquinas obsoletas
+
+### 🔧Mantenimiento
+
+- **tools**: Elimina artefactos rp_prompts obsoletos, permite herramientas/*.py en gitignore
+- **items**: Asignar CMD faltantes a las variantes ITEM_BAND y NETWORK_POWER_DISPLAY en gear.yml
+## [2026-06-09] · `ca942b3`
+
+
+### 🐛 Corregido See More
+
+- **events**: Cambiar el nombre del directorio de recursos JAR de Challenge_bosses (era anime_bosses)
+- **energy,ae**: Puente del consumidor + retroalimentación de inserción del terminal ME
+
+### ♻️ Modificado
+
+- **lang**: Migrar mensajes codificados a claves de idioma (lote 1)
+- **lang**: Migrar cadenas codificadas del complemento nexusprism a claves de idioma
+- **lang**: Reemplace todos los § literales con & en archivos lang
+- **lang**: Migrar las cadenas restantes del complemento nexusprism a claves de idioma
+- **lang**: Migrar cadenas en eventos/mmo/rng/security/discord/quests a claves de idioma
+- **lang**: Migrar las cadenas § restantes en chat/core/crates/mmo/machines/enchants a las claves de idioma y ChatColor
+## [2026-06-08] · `d1b12d2`
+
+
+### ✨Añadido See More
+
+- **items,ae**: Niveles de martillo, capacidad de bytes AE2, corrección de persistencia ME
+- **vfx,mmo,crates**: VFXUtil, placas de identificación de salud de la mafia, VFX de habilidad, VFX de caja
+
+### 🐛 Corregido See More
+
+- **machines**: Infraestructura energética exenta del catálogo Verificación de capa GUI
+- Teclas de idioma de estado de **ae,gui,energy**: AE, colorear la historia de la GUI, búfer de generación creativa
+- **ae,gui,commands**: Canales de cable de vidrio, GUI creativas, finalización de pestañas
+- El controlador **ae**: proporciona 8 canales base para que funcionen las redes sin cables
+- **mmo**: Soluciona el conflicto de la barra de acciones entre las notificaciones de HUD y XP
+
+### ♻️ Modificado
+
+- **display**: Centraliza la barra de acciones a través de ActionBarManager
+- **events**: Cambiar el nombre del paquete de anime y las clases para desafiar
+- **events**: Termina el anime → cambia el nombre del desafío en documentos, idiomas y recursos
+
+### 🔧Mantenimiento
+
+- **cleanup**: Eliminar copias archivadas y eliminar banners CUT obsoletos
+- **cleanup**: Elimina los banners CUT obsoletos restantes y actualiza los ejemplos/cajas
+## [2026-06-07] · `c2888ce`
+
+
+### 🐛 Corregido See More
+
+- **machines**: Omitir claves de plantilla/campos en el cargador; soltar el archivo de elementos generados obsoletos
+- **items**: Propagar colocables a través de plantillas + podar elementos de máquina generados duplicados
+- **machines**: Agregar definición de comportamiento de ALMACENAMIENTO CREATIVE_CAPACITOR
+- **machines**: Agregue generadores AVANZADOS + ELECTRIC_BLAST_FURNACE, alinee los identificadores FAL/MOB
+## [2026-06-06] · `e7a40f7`
+
+
+### ✨Añadido See More
+
+- **api**: Reconstruir la superficie API de artículo/máquina/receta
+- **core**: MachineManager respaldado por PDC + registro/resolvedores de elementos
+- **machines**: Motor tipificado, registro, definiciones, cargador + validador de catálogo
+- **ae**: Reconstruir la red ME como máquinas controladas por MachineContext
+- **storage**: Persiste las ubicaciones de las máquinas a través de DataManager (SQLite/MySQL/YAML)
+- **machines**: Pegamento de complemento, oyentes divididos, controlador GUI, cargadores, cableado
+- **recipes**: Migrar red ME, celda de almacenamiento + elaboración de mochila a YAML
+- **machines**: Hacer que todas las máquinas estén disponibles + proporcionar GUI basadas en tipos
+- **energy**: Infinite CREATIVE_CAPACITOR + solo marca los bloques controlados por el motor
+- **energy**: Conectar los generadores del motor a la red de cable + alternar el modo de exportación
+
+### 🐛 Corregido See More
+
+- **machines**: Cambie el nombre de la clave GUI de CRUSHER a ORE_CRUSHER; dedup CREATIVE_CAPACITOR
+- **items**: Fusionar CREATIVE_GENERATOR_BLOCK perdido en CREATIVE_GENERATOR
+
+### ♻️ Modificado
+
+- **energy,mmo,systems,items**: Vuelva a conectar a los consumidores a la nueva API de artículo/máquina
+- **machines**: Fusionar elementos generados en machine_blocks + GUI con reconocimiento de subtipos
+
+### 📚 Documentación
+
+- **recipes**: Documento codificado de RecipeLoader a las brechas de migración de YAML
+- **recipes**: Marcar recetas ME/celdas de almacenamiento/mochila como migradas
+
+### 🔧Mantenimiento
+
+- Gitignore actualizado
+## [2026-06-04] · `6256f98`
+
+
+### 🔧Mantenimiento
+
+- **machines,items**: Archivar elemento/máquina/ME Java (sin eliminar) + consumidores de código auxiliar
+## [2026-06-03] · `7213cc6`
+
+
+### ✨Añadido See More
+
+- **waila**: Estadísticas de la máquina en vivo en HUD a través del motor compartido (Error 5)
+
+### 🐛 Corregido See More
+
+- **machines**: Break arroja un elemento de máquina personalizado, no el bloque básico
+- **machines**: Persiste las ubicaciones para que las máquinas sobrevivan al reinicio (Error 3)
+- **machines**: Un único motor compartido activa todas las máquinas (Error 4)
+
+### ♻️ Modificado
+
+- **machines**: Typed MachineContext + oyentes divididos (reescritura de la Sección 10)
+
+---
+
+## [2026-06-03] · `6d5654a`
+
+
+### ✨Añadido See More
+
+- **events**: Título de Groq por retador al aparecer el jefe
+- **vip**: Alinee los kits VIP del juego con los niveles de la tienda web + entrega por cable
+- Las redes **ae**: ME ahora realmente requieren energía
+- **items**: Agregar categoría de elemento HERRAMIENTAS + actualizaciones de SubCategoryMatcher
+
+### 🐛 Corregido See More
+
+- Sistema **ae**: ME no funcional: ID de bloque en mayúsculas + materiales no funcionales
+- **data**: Consolidar QUANTUM_STORAGE_CELL id + arreglar TOME_OF_ENLIGHTENMENT + mensaje de jefe
+
+### 🔧Mantenimiento
+
+- **lang**: Renombrar Arco de Sacrificio -> Arco de Desafío, Jefe de Anime -> Retador del Más Allá
+## [2026-06-02] · `3ac9c37`
+
+
+### ✨Añadido See More
+
+- **twitch**: Comentarios visuales en el juego para eventos de sub/animación/incursión
+- Registro **machines**: MachineComponent para anular el comportamiento de ID por máquina
+- Sistema de impulso de XP global estilo SimpleXPBoosts
+- Comportamiento de acción/disparador estilo ExecutableItems de **items**:
+- **items**: /itemedit editor de elementos en vivo (inspirado en ItemEdit)
+- **mmo**: Combinación de teclas en modo captura: presione una tecla para vincular una habilidad
+- **events**: Realmente otorga bonificaciones MMO en recompensa de sacrificio
+
+### 🐛 Corregido See More
+
+- **items**: Eliminar definición ME_NETWORK_ACCESS_TERMINAL duplicada
+- Cambio de nombre de carpeta de paquete de datos **advancements**: 1.21 + extracción con reconocimiento de versión
+- **gui**: StatsGUI/KeyBindGUI se bloquea, questnpc UX, prefijo de guía del centro de comandos
+
+### 🔧Mantenimiento
+
+- Carpeta del complemento de referencia de Gitignore/inspirations
+
+---
+
+## [2026-06-02] · `d2ba3e7`
+
+
+### ✨Añadido See More
+
+- **discord**: Sistema de combate de bonificación de roles
+- ConfigMigrator auto-merge + comando de migración MySQL (Fase 3)
+- **mmo**: Rediseño de GUI inspirado en AuraSkills + HUD de enfriamiento de ataque
+- **essentials**: El personal desaparece + recompensas por hitos del tiempo de juego
+
+### 🐛 Corregido See More
+
+- Conflictos de ME CMD, elementos faltantes de NETWORK_CAPACITOR, ID de recetas, ejecutor de combinación de teclas, circuitos.yml
+
+### ♻️ Modificado
+
+- **ae**: Rediseño de GUI de unidad/terminal ME + corrección de errores críticos
+
+---
+
+## [2026-06-02] · `19ac7e8`
+
+
+### 🐛 Corregido See More
+
+- Trabajos NPE + dejar UX, elementos ME, comando de combinación de teclas, argumentos del centro de comando
+## [2026-06-01] · `f0cc6ca`
+
+
+### ✨Añadido See More
+
+- **mmo**: Sistema de daño de arma por elemento con seguimiento de proyectiles
+- **advancements**: Sistema de avance personalizado mediante paquete de datos + activadores de complementos
+
+---
+
+## [2026-06-01] · `b86702c`
+
+
+### ✨Añadido See More
+
+- **quests**: Agregue sistema de misiones, otorgadores de NPC, GUI del centro de comando y expansión de combinación de teclas
+- **discord**: Bot de Discord y actualizaciones de integración
+- **energy**: Agregar componente generador creativo
+
+### ♻️ Modificado
+
+- **core**: Migrar recursos del complemento a datos/subcarpeta
+
+### 🔧Mantenimiento
+
+- Mejoras en la GUI, MMO, economía y otras mejoras en todo el módulo
+- Eliminar archivos basura obsoletos, actualizar gitignore y actualizar CHANGELOG
+
+---
+
+## [2026-05-29] · `1985014`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Fuerza PT-BR en el mensaje Groq, elimina las comillas circundantes de la respuesta
+
+---
+
+## [2026-05-29] · `7fcaa1d`
+
+
+### 🐛 Corregido See More
+
+- Mensaje AI **ci**: en portugués, muévase al contenido de arriba para insertar con formato de encabezado de Discord
+
+---
+
+## [2026-05-29] · `3d42824`
+
+
+### 🐛 Corregido See More
+
+- **discord**: Messages.yml se guardó en una ruta incorrecta, lo que provocó que todas las claves regresaran [Mensaje faltante]
+
+---
+
+## [2026-05-29] · `8709b16`
+
+
+### ✨Añadido See More
+
+- **ci**: Mensaje generado por IA a través de Groq en notificaciones de compilación de Discord
+
+---
+
+## [2026-05-29] · `8ba64aa`
+
+
+### 🔧Mantenimiento
+
+- **ci**: Avatar de robot aleatorio por compilación en notificaciones de Discord
+
+---
+
+## [2026-05-29] · `6b528c3`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Ejecute pruebas en CI, elimine el flujo de trabajo de compilación redundante, agrupe el registro de cambios por tipo de confirmación
+
+---
+
+## [2026-05-28] · `b3be732`
+
+
+### 🐛 Corregido See More
+
+- **machines-gui**: Extraiga máquinas-gui.yml a la carpeta de datos al iniciar
+
+---
+
+## [2026-05-28] · `329fd92`
+
+
+### 🐛 Corregido See More
+
+- **gui**: Guía de navegación, diseño de recetas, rango de paginación
+
+---
+
+## [2026-05-28] · `ec4b039`
+
+
+### ✨Añadido See More
+
+- **api**: Expone campos colocables/multibloque, agrega VariantDefinition, corrige la referencia del tipo de máquina
+- **machines**: Agregar niveles de expansión automática y subtipo de procesamiento al cargador de la máquina
+- **plugin**: Fase 7: puente multibloque, actualizaciones del cargador DataDriven, cambios de nombre de ID de receta
+
+### 🐛 Corregido See More
+
+- **plugin**: El comando Give muestra nombres para mostrar, alternancia de mensajes de interrupción, registro de implementación de API
+
+### 🔧Mantenimiento
+
+- **items**: Fase 6: cambio de nombre masivo de _BLOCK, limpieza nativa de la máquina, variantes predeterminadas
+- **plugin**: Actualizaciones de idioma/configuración: mensajes multibloque, alternancia de mensajes de interrupción, valores predeterminados económicos
+- **modules**: Actualizaciones en economía, mmo, seguridad, eventos, interfaz gráfica de usuario, rasgos, discordia, web, ss, pestañas
+- **ops**: Filtros Fail2ban y reglas de firewall para el bloqueo de atacantes y paquetes mal formados
+## [2026-05-23] · `5cc6c1c`
+
+
+### ✨Añadido See More
+
+- **tab**: Agregar /nexus marcador alternar comando por jugador
+## [2026-05-22] · `70a3df5`
+
+
+### ✨Añadido See More
+
+- **guide**: Fase 4 completa: recategorización masiva de 404 elementos + eliminación de 10 ID corruptos
+- **machines**: Agregar campo de subtipo de procesamiento a MachineDefinition
+
+### 🐛 Corregido See More
+
+- **gui**: Desorden del diseño de la receta + código de color sin formato en el título
+- **guide**: Ampliar los espacios de categoría a 28 y agregar paginación
+
+### 🔧Mantenimiento
+
+- **items**: Eliminar 31 SV_* heredados y duplicados de limo camelCase
+- **guide**: Elimina 4 elementos auxiliares heredados de Slimefun + agrega 15 íconos de categorías faltantes
+
+---
+
+## [2026-05-22] · `3ceeabf`
+
+
+### ✨Añadido See More
+
+- **gui**: Agregue GUI de máquina de tipo específico y envío de cables
+
+### 🐛 Corregido See More
+
+- **gui**: Evite el robo de elementos de las GUI de habilidades/rasgos mediante orden de apertura → registro
+
+### ♻️ Modificado
+
+- **items**: Cambiar el nombre de la llave inglesa + infinity_crafting_* ID a mayúsculas
+- **items**: Propagar nexus_crafting_node → NEXUS_CRAFTING_NODE cambiar nombre
+
+### 🔧Mantenimiento
+
+- **items**: Eliminar 85 elementos YAML heredados/duplicados (Fase 1)
+- **items**: Cambiar el nombre de nexus_crafting_node_block → NEXUS_CRAFTING_NODE_BLOCK
+
+---
+
+## [2026-05-22] · `4172dec`
+
+
+### ✨Añadido See More
+
+- **modules**: Activación/desactivación por módulo mediante config.yml y GUI
+
+---
+
+## [2026-05-21] · `208b215`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Pasa GH_PAT como entrada de token a action-gh-release
+
+---
+
+## [2026-05-21] · `a43cc50`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Utilice GH_PAT para la creación de versiones (GITHUB_TOKEN no tiene acceso de escritura de organización)
+
+---
+
+## [2026-05-21] · `69ac4f3`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Pase el registro de cambios a través de env var para evitar errores de sintaxis de bash
+
+---
+
+## [2026-05-21] · `cf363dd`
+
+
+### 🐛 Corregido See More
+
+- **ci**: Corrige 403 push, versiones de acción incorrecta y activadores de rama incorrectos
+
+---
+
+## [2026-05-21] · `e488545`
+
+
+### 🔧Mantenimiento
+
+- Se eliminó la lista de materiales al inicio del archivo.
+
+---
+
+## [2026-05-21] · `2f25103`
+
+
+### ✨Añadido See More
+
+- **plugin**: Fase 2 NexusLynxReporter: enviar latidos/registros/config a Railway
+- Filtro **reporter**: REDACT + niveles de registro/alerta configurables
+- **anti-dupe**: Prevención de engaños de ruptura de bloques en rng/mmo/traits
+
+### 🐛 Corregido See More
+
+- **reporter**: Ampliar el filtro REDACT para cubrir las URL de conexión JDBC
+- **discord**: Traducir mensajes de estado del servidor al portugués
+
+### ♻️ Modificado
+
+- **config**: Centraliza todos los secretos en key_configs.yml
+- **reporter**: Elimina el filtro por clave de pushConfig: key_configs.yml es el único archivo omitido
+- **config**: Key_configs.yml solo contiene secretos: las claves no confidenciales se mueven a archivos de módulo
+
+---
+
+## [2026-05-14] · `bab3917`
+
+
+### ✨Añadido See More
+
+- **i18n**: Conecte LanguageManager a módulos de seguridad, protecciones y clanes
+- **i18n**: Conecte LanguageManager a MachineManager, SilkSpawners, Twitch; agregue todas las claves de idioma nuevas a 4 configuraciones regionales
+- **i18n**: Migrar gui/mmo/web/ae/energy/essentials/protections a LanguageManager
+## [2026-05-13] · `3cfce4c`
+
+
+### ✨Añadido See More
+
+- **i18n**: Conecte TagGUI/RtpWorldGUI a LanguageManager + agregue LanguageSelectGUI
+
+---
+
+## [2026-05-13] · `2201b42`
+
+
+### 📚 Documentación
+
+- **config**: Anota key_configs.yml con la var env fuente para cada clave
+
+---
+
 ## [2026-05-13] · `191f461`
 
 
