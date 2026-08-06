@@ -5,6 +5,27 @@
 
 ---
 
+## [2026-08-06] · `ab72213`
+
+
+### ✨ Added
+
+- **events**: Externalize hardcoded gameplay balance to config
+
+### 🐛 Fixed
+
+- **security**: Scrub real IP/username from javadoc example, remove hardcoded nexus-bot fallback URL
+
+### ♻️ Changed
+
+- **core**: Remove confirmed-dead item/machine/energy/research domain
+
+### 📚 Documentation
+
+- Update reference docs to match current module/API surface
+
+---
+
 ## [2026-07-11] · `36e78ff`
 
 

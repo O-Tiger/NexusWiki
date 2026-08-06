@@ -4,6 +4,27 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-08-06] · `ab72213`
+
+
+### ✨Añadido See More
+
+- **events**: Externaliza el equilibrio del juego codificado en la configuración
+
+### 🐛 Corregido See More
+
+- **security**: Elimina la IP/nombre de usuario real del ejemplo de javadoc, elimina la URL de reserva de nexus-bot codificada
+
+### ♻️ Modificado
+
+- **core**: Eliminar elemento/máquina/energía/dominio de investigación confirmado-muerto
+
+### 📚 Documentación
+
+- Actualizar los documentos de referencia para que coincidan con el módulo/superficie API actual
+
+---
+
 ## [2026-07-11] · `36e78ff`
 
 
