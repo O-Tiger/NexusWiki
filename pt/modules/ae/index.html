@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1258,24 +1258,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Armazenamento ME
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1292,69 +1274,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Índice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#fundamentos-da-rede" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fundamentos da Rede
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maquinas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Máquinas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#celulas-de-armazenamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Células de Armazenamento
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#primeiros-passos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Primeiros Passos
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1772,58 +1691,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Índice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#fundamentos-da-rede" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fundamentos da Rede
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maquinas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Máquinas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#celulas-de-armazenamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Células de Armazenamento
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#primeiros-passos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Primeiros Passos
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1843,115 +1710,17 @@
 
 
 <h1 id="modulo-me-storage">Módulo ME Storage<a class="headerlink" href="#modulo-me-storage" title="Permanent link">&para;</a></h1>
-<p>O módulo ME Storage é um <strong>sistema de armazenamento em rede estilo Applied Energistics</strong>. Coloque um ME Controller, conecte drives e terminais via cabos e gerencie milhares de itens por uma única interface unificada.</p>
-<hr />
-<h2 id="fundamentos-da-rede">Fundamentos da Rede<a class="headerlink" href="#fundamentos-da-rede" title="Permanent link">&para;</a></h2>
-<p>Uma rede requer:
-1. <strong>ME Controller</strong> — alimenta a rede e define o orçamento de canais
-2. <strong>Cabos</strong> — conectam componentes; diferentes níveis fornecem diferentes quantidades de canais
-3. <strong>ME Drive</strong> — armazena células de armazenamento (o armazenamento real de itens)
-4. <strong>ME Terminal</strong> — o GUI onde jogadores inserem e retiram itens</p>
-<p>Componentes além do orçamento de canais são marcados como <strong>inativos</strong> e não funcionam.</p>
-<hr />
-<h2 id="maquinas">Máquinas<a class="headerlink" href="#maquinas" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>ID da Máquina</th>
-<th>Descrição</th>
-<th>Canais</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>me_controller</code></td>
-<td>Alimenta a rede; clique direito para status</td>
-<td>—</td>
-</tr>
-<tr>
-<td><code>me_cable_glass</code></td>
-<td>Cabo básico — apenas conectividade, sem canais</td>
-<td>0</td>
-</tr>
-<tr>
-<td><code>me_cable_smart</code></td>
-<td>Cabo padrão</td>
-<td>8</td>
-</tr>
-<tr>
-<td><code>me_cable_dense</code></td>
-<td>Cabo de alta largura de banda</td>
-<td>32</td>
-</tr>
-<tr>
-<td><code>me_drive</code></td>
-<td>Comporta até 10 células de armazenamento</td>
-<td>1</td>
-</tr>
-<tr>
-<td><code>me_terminal</code></td>
-<td>GUI para inserir e retirar itens</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="celulas-de-armazenamento">Células de Armazenamento<a class="headerlink" href="#celulas-de-armazenamento" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Célula</th>
-<th>ID do Item</th>
-<th>Capacidade</th>
-<th>Máx. Tipos</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Célula 1K</td>
-<td><code>STORAGE_CELL_1K</code></td>
-<td>1.024 itens</td>
-<td>63</td>
-</tr>
-<tr>
-<td>Célula 4K</td>
-<td><code>STORAGE_CELL_4K</code></td>
-<td>4.096 itens</td>
-<td>63</td>
-</tr>
-<tr>
-<td>Célula 16K</td>
-<td><code>STORAGE_CELL_16K</code></td>
-<td>16.384 itens</td>
-<td>63</td>
-</tr>
-<tr>
-<td>Célula 64K</td>
-<td><code>STORAGE_CELL_64K</code></td>
-<td>65.536 itens</td>
-<td>63</td>
-</tr>
-<tr>
-<td>Célula 256K</td>
-<td><code>STORAGE_CELL_256K</code></td>
-<td>262.144 itens</td>
-<td>63</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Quebrando um Drive</p>
-<p>Ao quebrar um ME Drive, as células caem como seu material base — os conteúdos armazenados <strong>não são dropados</strong>. Sempre retire os itens pelo terminal antes de remover um drive.</p>
-</div>
-<hr />
-<h2 id="primeiros-passos">Primeiros Passos<a class="headerlink" href="#primeiros-passos" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Obtenha um <code>me_controller</code>, cabos, um <code>me_drive</code>, um <code>me_terminal</code> e ao menos uma célula</li>
-<li>Coloque o controller, depois conecte o drive e o terminal via cabos</li>
-<li>Clique com botão direito no controller para verificar se a rede está online</li>
-<li>Clique com botão direito no drive e insira uma célula de armazenamento</li>
-<li>Clique com botão direito no terminal para começar a gerenciar itens</li>
-</ol>
+<blockquote>
+<p>⚠️ <strong>Removido em 2026-08-06.</strong> Esta página descrevia anteriormente um sistema de
+armazenamento em rede no estilo Applied Energistics (gerenciador de addon <code>NetworkStorage</code>:
+ME Controller/cabos/drives/terminais/células de armazenamento) que foi confirmado como
+<strong>código morto</strong> — nunca conectado a nenhum listener ou comando, sem nenhum chamador real
+restante no código. Nenhum sistema desses existe atualmente no NexusPrism. Veja
+<code>NexusATS/docs/planning/PLAN-nexuscore-addon-systems.md</code> para as notas de design se você
+estiver construindo um substituto no NexusATS.</p>
+<p>Conteúdo de máquinas/armazenamento agora pertence inteiramente ao <strong>NexusATS</strong>. Veja a
+documentação desse plugin daqui em diante.</p>
+</blockquote>
 
 
 
@@ -2037,7 +1806,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

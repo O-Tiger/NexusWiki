@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1557,10 +1557,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mochilas-pontos-de-viagem" class="md-nav__link">
+  <a href="#pontos-de-viagem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mochilas &amp; Pontos de Viagem
+        Pontos de Viagem
       
     </span>
   </a>
@@ -1933,10 +1933,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mochilas-pontos-de-viagem" class="md-nav__link">
+  <a href="#pontos-de-viagem" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mochilas &amp; Pontos de Viagem
+        Pontos de Viagem
       
     </span>
   </a>
@@ -2170,13 +2170,13 @@
 <tr>
 <td><code>/nexusprism give &lt;player&gt; &lt;item&gt;</code></td>
 <td></td>
-<td>Dar um item personalizado</td>
+<td>Dar um item — requer NexusATS</td>
 <td><code>nexusprism.admin.give</code></td>
 </tr>
 <tr>
 <td><code>/nexusprism guide</code></td>
 <td></td>
-<td>Abrir GUI do guia de itens</td>
+<td>Abrir guia de itens — requer NexusATS</td>
 <td><code>nexusprism.command</code></td>
 </tr>
 <tr>
@@ -2186,64 +2186,16 @@
 <td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusprism machine info &lt;id&gt;</code></td>
+<td><code>/nexusprism machines</code></td>
 <td></td>
-<td>Detalhes da máquina</td>
+<td>Informações de máquina — requer NexusATS</td>
 <td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusprism machine list</code></td>
+<td><code>/nexusprism research</code></td>
 <td></td>
-<td>Listar todas as máquinas</td>
+<td>Menu de pesquisa — requer NexusATS</td>
 <td><code>nexusprism.command</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism energy info &lt;x,y,z&gt;</code></td>
-<td></td>
-<td>Informações do nó de energia</td>
-<td><code>nexusprism.command</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism energy network</code></td>
-<td></td>
-<td>Ver rede de energia</td>
-<td><code>nexusprism.command</code></td>
-</tr>
-<tr>
-<td><code>/research</code></td>
-<td></td>
-<td>Ver progresso de pesquisa</td>
-<td><code>nexusprism.research</code></td>
-</tr>
-<tr>
-<td><code>/research list [tier]</code></td>
-<td></td>
-<td>Listar pesquisas por tier</td>
-<td><code>nexusprism.research</code></td>
-</tr>
-<tr>
-<td><code>/research &lt;item-id&gt;</code></td>
-<td></td>
-<td>Verificar pesquisa específica</td>
-<td><code>nexusprism.research</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism research all &lt;player&gt;</code></td>
-<td></td>
-<td>Desbloquear todas as pesquisas para um jogador</td>
-<td><code>nexusprism.research.admin</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism research tier &lt;player&gt; &lt;tier&gt;</code></td>
-<td></td>
-<td>Desbloquear todas as pesquisas de um tier</td>
-<td><code>nexusprism.research.admin</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism research entry &lt;player&gt; &lt;entry-id&gt;</code></td>
-<td></td>
-<td>Desbloquear uma entrada de pesquisa específica</td>
-<td><code>nexusprism.research.admin</code></td>
 </tr>
 <tr>
 <td><code>/recipe &lt;item&gt;</code></td>
@@ -2253,8 +2205,13 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>Removido em 2026-08-06:</strong> <code>/research</code> avulso, <code>/nexusprism machine info/list</code>,
+<code>/nexusprism energy info/network</code> e comandos <code>/backpack</code> descreviam sistemas mortos, sem
+nenhum código restante. Veja <code>modules/core.md</code>.</p>
+</blockquote>
 <hr />
-<h2 id="mochilas-pontos-de-viagem">Mochilas &amp; Pontos de Viagem<a class="headerlink" href="#mochilas-pontos-de-viagem" title="Permanent link">&para;</a></h2>
+<h2 id="pontos-de-viagem">Pontos de Viagem<a class="headerlink" href="#pontos-de-viagem" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -2265,18 +2222,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>/backpack open [id]</code></td>
-<td></td>
-<td>Abrir sua mochila</td>
-<td><code>nexusprism.essentials.backpack</code></td>
-</tr>
-<tr>
-<td><code>/backpack list</code></td>
-<td></td>
-<td>Listar todas as mochilas</td>
-<td><code>nexusprism.essentials.backpack</code></td>
-</tr>
 <tr>
 <td><code>/waypoint create &lt;name&gt;</code></td>
 <td><code>/wp</code></td>
@@ -3294,7 +3239,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1376,21 +1376,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estruturas-suportadas" class="md-nav__link">
+  <a href="#api-de-addon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estruturas Suportadas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracao-structuresloot-tablesyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuração (structures/loot-tables.yml)
+        API de Addon
       
     </span>
   </a>
@@ -1779,21 +1768,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#estruturas-suportadas" class="md-nav__link">
+  <a href="#api-de-addon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Estruturas Suportadas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracao-structuresloot-tablesyml" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuração (structures/loot-tables.yml)
+        API de Addon
       
     </span>
   </a>
@@ -1821,95 +1799,54 @@
 
 
 <h1 id="modulo-structures">Módulo Structures<a class="headerlink" href="#modulo-structures" title="Permanent link">&para;</a></h1>
-<p>O módulo Structures <strong>injeta loot personalizado</strong> nos baús de estruturas vanilla. Quando o servidor gera loot para qualquer estrutura suportada, o módulo adiciona (ou substitui) o conteúdo dos baús com itens definidos em <code>structures/loot-tables.yml</code> — incluindo itens personalizados do NexusPrism.</p>
+<p>O NexusPrism possui apenas o <strong>hook</strong>, não o conteúdo de loot. Ele escuta o
+<code>LootGenerateEvent</code> do Paper e repassa para qualquer addon que tenha registrado um
+<a href="#api-de-addon"><code>StructureProvider</code></a> — ele não fornece nenhuma tabela de loot de estruturas
+própria.</p>
+<blockquote>
+<p>Anteriormente este módulo tinha seu próprio sistema de tabelas de loot personalizadas em
+YAML (<code>structures/loot-tables.yml</code>). Isso foi removido em 2026-08-06 — a parte de resolução
+de itens foi confirmada como não-funcional (sempre resolvia para nada), e qualquer conteúdo
+real de loot agora pertence aos plugins addon via a API <code>StructureProvider</code> abaixo. Veja
+<code>NexusATS/docs/planning/PLAN-presplit-core-infra.md</code> para as notas de design se você
+estiver construindo um sistema substituto de tabelas de loot no NexusATS.</p>
+</blockquote>
 <hr />
 <h2 id="como-funciona">Como Funciona<a class="headerlink" href="#como-funciona" title="Permanent link">&para;</a></h2>
-<p>O módulo escuta o <code>LootGenerateEvent</code> do Paper. Quando um baú de estrutura é populado, ele:
-1. Identifica a estrutura pela chave da tabela de loot
-2. Procura a entrada configurada em <code>loot-tables.yml</code>
-3. Rola a quantidade de itens adicionais (<code>min</code>–<code>max</code>) e injeta itens por peso</p>
-<p>Nenhum comando é necessário — a injeção de loot é totalmente passiva.</p>
+<ol>
+<li>Um baú de estrutura gera loot (qualquer estrutura vanilla, ou uma modificada).</li>
+<li>O NexusPrism identifica a chave da tabela de loot (ex: <code>minecraft:chests/simple_dungeon</code>).</li>
+<li>Cada <code>StructureProvider</code> registrado é consultado por itens extras via <code>generateLoot(...)</code>.</li>
+<li>Os itens retornados pelos provedores são adicionados ao baú.</li>
+</ol>
+<p>Nenhum comando, nenhum arquivo de configuração — a injeção de loot é totalmente passiva e
+inteiramente controlada por addons.</p>
 <hr />
-<h2 id="estruturas-suportadas">Estruturas Suportadas<a class="headerlink" href="#estruturas-suportadas" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Estrutura</th>
-<th>Injeção Padrão</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>minecraft:dungeon</code></td>
-<td>Pergaminho de Pesquisa (Básico)</td>
-</tr>
-<tr>
-<td><code>minecraft:mineshaft</code></td>
-<td>Pergaminho de Pesquisa (Básico)</td>
-</tr>
-<tr>
-<td><code>minecraft:desert_pyramid</code></td>
-<td>Pergaminho de Pesquisa (Básico)</td>
-</tr>
-<tr>
-<td><code>minecraft:jungle_temple</code></td>
-<td>Pergaminho de Pesquisa (Básico)</td>
-</tr>
-<tr>
-<td><code>minecraft:ocean_ruin</code></td>
-<td>Pergaminho de Pesquisa (Básico)</td>
-</tr>
-<tr>
-<td><code>minecraft:shipwreck</code></td>
-<td>Pergaminho de Pesquisa (Básico)</td>
-</tr>
-<tr>
-<td><code>minecraft:pillager_outpost</code></td>
-<td>Pergaminho de Pesquisa (Básico)</td>
-</tr>
-<tr>
-<td><code>minecraft:stronghold</code></td>
-<td>Pergaminho de Pesquisa (Avançado)</td>
-</tr>
-<tr>
-<td><code>minecraft:woodland_mansion</code></td>
-<td>Pergaminho de Pesquisa (Avançado)</td>
-</tr>
-<tr>
-<td><code>minecraft:bastion_remnant</code></td>
-<td>Pergaminho de Pesquisa (Avançado)</td>
-</tr>
-<tr>
-<td><code>minecraft:end_city</code></td>
-<td>Pergaminho de Pesquisa (Infinito)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="configuracao-structuresloot-tablesyml">Configuração (<code>structures/loot-tables.yml</code>)<a class="headerlink" href="#configuracao-structuresloot-tablesyml" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">minecraft:dungeon</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APPEND</span><span class="w">      </span><span class="c1"># APPEND (adiciona ao loot vanilla) | REPLACE (substitui o loot vanilla)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">rolls</span><span class="p">:</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">items</span><span class="p">:</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EMERALD</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">amount</span><span class="p">:</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">material</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENCHANTED_BOOK</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">amount</span><span class="p">:</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">random-enchant</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">nexusprism-item</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RESEARCH_PARCHMENT_BASIC</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nt">amount</span><span class="p">:</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<h2 id="api-de-addon">API de Addon<a class="headerlink" href="#api-de-addon" title="Permanent link">&para;</a></h2>
+<p>Plugins addon registram um provedor de loot personalizado via <code>StructureRegistry</code>
+(<code>io.github.otiger.nexusprism.api.structures</code>):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MeuStructureProvider</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">StructureProvider</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getProviderId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;meu_addon&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">ItemStack</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">generateLoot</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">lootTableKey</span><span class="p">,</span><span class="w"> </span><span class="n">Inventory</span><span class="w"> </span><span class="n">inventory</span><span class="p">,</span><span class="w"> </span><span class="n">Random</span><span class="w"> </span><span class="n">rng</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">handles</span><span class="p">(</span><span class="n">lootTableKey</span><span class="p">))</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">();</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="c1">// ... calcule sua própria tabela de loot aqui ...</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">meuItem</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// onEnable():</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">StructureRegistry</span><span class="p">.</span><span class="na">register</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">MeuStructureProvider</span><span class="p">());</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">// onDisable():</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">StructureRegistry</span><span class="p">.</span><span class="na">unregister</span><span class="p">(</span><span class="n">provider</span><span class="p">);</span>
 </code></pre></div>
+<p><code>generateLoot</code> recebe a chave completa da tabela de loot, o inventário do baú (referência
+somente-leitura), e um <code>Random</code> com seed — tudo o que é necessário para implementar qualquer
+formato de tabela de loot personalizado de forma independente, sem que o NexusPrism precise
+saber sobre isso.</p>
 
 
 
@@ -1995,7 +1932,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

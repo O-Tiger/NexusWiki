@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1567,43 +1567,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#backpacks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Backpacks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Machines
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#luckperms" class="md-nav__link">
     <span class="md-ellipsis">
       
         LuckPerms
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guide
       
     </span>
   </a>
@@ -2010,43 +1977,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#backpacks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Backpacks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Machines
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#luckperms" class="md-nav__link">
     <span class="md-ellipsis">
       
         LuckPerms
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guide" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guide
       
     </span>
   </a>
@@ -2335,6 +2269,10 @@
 </table>
 <hr />
 <h2 id="player-stats">Player Stats<a class="headerlink" href="#player-stats" title="Permanent link">&para;</a></h2>
+<p>⚠️ Item/machine/energy/research stat placeholders (blocks broken, machines placed, items
+crafted, energy generated, research unlocked) were removed 2026-08-06 — the underlying
+<code>player_stats</code> table and the systems that would feed it were confirmed dead (no code ever
+persisted or fed those values; see <code>ECOSYSTEM.md</code>). Only generic player-level stats remain:</p>
 <table>
 <thead>
 <tr>
@@ -2344,81 +2282,10 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>%nexusprism_player_blocks_broken%</code></td>
-<td>Total blocks broken</td>
-<td><code>48320</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_machines_placed%</code></td>
-<td>Total machines placed</td>
-<td><code>214</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_items_crafted%</code></td>
-<td>Total items crafted</td>
-<td><code>5630</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_energy_generated%</code></td>
-<td>Total energy generated (RF)</td>
-<td><code>1200000</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_items_smelted%</code></td>
-<td>Total items smelted</td>
-<td><code>890</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_research_unlocked%</code></td>
-<td>Research entries unlocked</td>
-<td><code>34</code></td>
-</tr>
 <tr>
 <td><code>%nexusprism_player_level%</code></td>
 <td>Player NexusPrism level</td>
 <td><code>15</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_researched_&lt;id&gt;%</code></td>
-<td><code>true</code> if a specific research is unlocked</td>
-<td><code>true</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="backpacks">Backpacks<a class="headerlink" href="#backpacks" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Placeholder</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>%nexusprism_backpacks_owned%</code></td>
-<td>Number of backpacks the player owns</td>
-<td><code>2</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="machines">Machines<a class="headerlink" href="#machines" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Placeholder</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>%nexusprism_machines_count%</code></td>
-<td>Total machines placed by player</td>
-<td><code>42</code></td>
 </tr>
 </tbody>
 </table>
@@ -2446,23 +2313,6 @@
 </tbody>
 </table>
 <p>These require LuckPerms to be installed.</p>
-<hr />
-<h2 id="guide">Guide<a class="headerlink" href="#guide" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Placeholder</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>%nexusprism_guide_&lt;id&gt;%</code></td>
-<td>Dynamic guide entry for item/machine ID</td>
-</tr>
-</tbody>
-</table>
-<p>These are dynamic — replace <code>&lt;id&gt;</code> with any registered item or machine ID.</p>
 <hr />
 <h2 id="mmo">MMO<a class="headerlink" href="#mmo" title="Permanent link">&para;</a></h2>
 <p><strong>Module required</strong> (<code>nexusprism-mmo</code>).</p>
@@ -2784,7 +2634,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1258,24 +1258,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    ME Storage
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1292,91 +1274,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#network-basics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Network Basics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Machines
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage-cells" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Storage Cells
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#block-interactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Block Interactions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#persistence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Persistence
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1794,80 +1691,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#network-basics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Network Basics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Machines
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage-cells" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Storage Cells
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#block-interactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Block Interactions
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#persistence" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Persistence
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Getting Started
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1887,145 +1710,16 @@
 
 
 <h1 id="me-storage-module">ME Storage Module<a class="headerlink" href="#me-storage-module" title="Permanent link">&para;</a></h1>
-<p>The ME Storage module is an <strong>Applied Energistics-style network storage system</strong>. Place an ME Controller, connect drives and terminals via cables, and manage thousands of items through a single unified inventory.</p>
-<hr />
-<h2 id="network-basics">Network Basics<a class="headerlink" href="#network-basics" title="Permanent link">&para;</a></h2>
-<p>A network requires:
-1. <strong>ME Controller</strong> — powers the network and defines the channel budget
-2. <strong>Cables</strong> — connect components; different tiers provide different channel counts
-3. <strong>ME Drive</strong> — holds storage cells (actual item storage)
-4. <strong>ME Terminal</strong> — the GUI where players insert and retrieve items</p>
-<p>Components beyond the channel budget are marked <strong>inactive</strong> and do not function. The network rescans automatically 1 tick after any AE block is placed or broken.</p>
-<hr />
-<h2 id="machines">Machines<a class="headerlink" href="#machines" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Machine ID</th>
-<th>Description</th>
-<th>Channels</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>me_controller</code></td>
-<td>Powers the network; right-click for network status</td>
-<td>—</td>
-</tr>
-<tr>
-<td><code>me_cable_glass</code></td>
-<td>Basic cable — connectivity only, no channels</td>
-<td>0</td>
-</tr>
-<tr>
-<td><code>me_cable_smart</code></td>
-<td>Standard cable</td>
-<td>8</td>
-</tr>
-<tr>
-<td><code>me_cable_dense</code></td>
-<td>High-bandwidth cable</td>
-<td>32</td>
-</tr>
-<tr>
-<td><code>me_drive</code></td>
-<td>Holds up to 10 storage cells</td>
-<td>1</td>
-</tr>
-<tr>
-<td><code>me_terminal</code></td>
-<td>GUI for inserting and retrieving items</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>Channel budget = sum of channel capacities of cables <strong>directly adjacent</strong> to the controller. Drives and terminals each cost 1 channel. The BFS scan limit is 512 blocks.</p>
-<hr />
-<h2 id="storage-cells">Storage Cells<a class="headerlink" href="#storage-cells" title="Permanent link">&para;</a></h2>
-<p>Storage cells are items inserted into ME Drives to provide inventory capacity.</p>
-<table>
-<thead>
-<tr>
-<th>Cell</th>
-<th>Item ID</th>
-<th>Capacity</th>
-<th>Max Item Types</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1K Cell</td>
-<td><code>STORAGE_CELL_1K</code></td>
-<td>1,024 items</td>
-<td>63</td>
-</tr>
-<tr>
-<td>4K Cell</td>
-<td><code>STORAGE_CELL_4K</code></td>
-<td>4,096 items</td>
-<td>63</td>
-</tr>
-<tr>
-<td>16K Cell</td>
-<td><code>STORAGE_CELL_16K</code></td>
-<td>16,384 items</td>
-<td>63</td>
-</tr>
-<tr>
-<td>64K Cell</td>
-<td><code>STORAGE_CELL_64K</code></td>
-<td>65,536 items</td>
-<td>63</td>
-</tr>
-<tr>
-<td>256K Cell</td>
-<td><code>STORAGE_CELL_256K</code></td>
-<td>262,144 items</td>
-<td>63</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Breaking a drive</p>
-<p>When an ME Drive is broken, the cell <strong>items</strong> drop as their base material — the stored contents are <strong>not</strong> dropped. Always extract items via the terminal before removing a drive.</p>
-</div>
-<hr />
-<h2 id="block-interactions">Block Interactions<a class="headerlink" href="#block-interactions" title="Permanent link">&para;</a></h2>
-<p>There are no commands — all ME interaction is via right-click:</p>
-<table>
-<thead>
-<tr>
-<th>Block</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>me_controller</code></td>
-<td>Prints network status: online/offline, channels used/total, component count</td>
-</tr>
-<tr>
-<td><code>me_drive</code></td>
-<td>Opens the Drive GUI — manage the 10 cell slots</td>
-</tr>
-<tr>
-<td><code>me_terminal</code></td>
-<td>Opens the Terminal GUI — view, insert, and extract items from all drives (requires powered network + available channels)</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="persistence">Persistence<a class="headerlink" href="#persistence" title="Permanent link">&para;</a></h2>
-<p>Drive states (which cells are installed and their contents) are saved to <code>ae/drives/{world}_{x}_{y}_{z}.yml</code> files. Data survives server restarts.</p>
-<hr />
-<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Craft or obtain an <code>me_controller</code>, some cables, an <code>me_drive</code>, an <code>me_terminal</code>, and at least one storage cell</li>
-<li>Place the controller, then connect the drive and terminal via cables</li>
-<li>Right-click the controller to verify the network is online</li>
-<li>Right-click the drive and insert a storage cell</li>
-<li>Right-click the terminal to start managing items</li>
-</ol>
+<blockquote>
+<p>⚠️ <strong>Removed 2026-08-06.</strong> This page previously described an Applied Energistics-style
+network storage system (<code>NetworkStorage</code> addon manager: ME Controller/cables/drives/
+terminals/storage cells) that was confirmed to be <strong>dead code</strong> — never wired to any
+listener or command, with zero real callers left in the codebase. No such system currently
+ships in NexusPrism. See <code>NexusATS/docs/planning/PLAN-nexuscore-addon-systems.md</code> for the
+design notes if you're building a replacement in NexusATS.</p>
+<p>Machine/storage content now belongs entirely to <strong>NexusATS</strong>. See that plugin's own
+documentation going forward.</p>
+</blockquote>
 
 
 
@@ -2111,7 +1805,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

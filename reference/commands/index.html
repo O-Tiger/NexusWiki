@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1557,10 +1557,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#backpacks-waypoints" class="md-nav__link">
+  <a href="#waypoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Backpacks &amp; Waypoints
+        Waypoints
       
     </span>
   </a>
@@ -1933,10 +1933,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#backpacks-waypoints" class="md-nav__link">
+  <a href="#waypoints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Backpacks &amp; Waypoints
+        Waypoints
       
     </span>
   </a>
@@ -2174,9 +2174,15 @@
 <td><code>nexusprism.admin.give</code></td>
 </tr>
 <tr>
+<td><code>/nexusprism give &lt;player&gt; &lt;item&gt;</code></td>
+<td></td>
+<td>Give an item — requires NexusATS</td>
+<td><code>nexusprism.admin.give</code></td>
+</tr>
+<tr>
 <td><code>/nexusprism guide</code></td>
 <td></td>
-<td>Open item guide GUI</td>
+<td>Open item guide — requires NexusATS</td>
 <td><code>nexusprism.command</code></td>
 </tr>
 <tr>
@@ -2186,64 +2192,16 @@
 <td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusprism machine info &lt;id&gt;</code></td>
+<td><code>/nexusprism machines</code></td>
 <td></td>
-<td>Machine details</td>
+<td>Machine info — requires NexusATS</td>
 <td><code>nexusprism.command</code></td>
 </tr>
 <tr>
-<td><code>/nexusprism machine list</code></td>
+<td><code>/nexusprism research</code></td>
 <td></td>
-<td>List all machines</td>
+<td>Research menu — requires NexusATS</td>
 <td><code>nexusprism.command</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism energy info &lt;x,y,z&gt;</code></td>
-<td></td>
-<td>Energy node info</td>
-<td><code>nexusprism.command</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism energy network</code></td>
-<td></td>
-<td>View energy network</td>
-<td><code>nexusprism.command</code></td>
-</tr>
-<tr>
-<td><code>/research</code></td>
-<td></td>
-<td>View your research progress</td>
-<td><code>nexusprism.research</code></td>
-</tr>
-<tr>
-<td><code>/research list [tier]</code></td>
-<td></td>
-<td>List research by tier</td>
-<td><code>nexusprism.research</code></td>
-</tr>
-<tr>
-<td><code>/research &lt;item-id&gt;</code></td>
-<td></td>
-<td>Check specific research</td>
-<td><code>nexusprism.research</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism research all &lt;player&gt;</code></td>
-<td></td>
-<td>Unlock all researches for a player</td>
-<td><code>nexusprism.research.admin</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism research tier &lt;player&gt; &lt;tier&gt;</code></td>
-<td></td>
-<td>Unlock all researches of a tier</td>
-<td><code>nexusprism.research.admin</code></td>
-</tr>
-<tr>
-<td><code>/nexusprism research entry &lt;player&gt; &lt;entry-id&gt;</code></td>
-<td></td>
-<td>Unlock a specific research entry</td>
-<td><code>nexusprism.research.admin</code></td>
 </tr>
 <tr>
 <td><code>/recipe &lt;item&gt;</code></td>
@@ -2253,8 +2211,13 @@
 </tr>
 </tbody>
 </table>
+<blockquote>
+<p><strong>Removed 2026-08-06:</strong> standalone <code>/research</code>, <code>/nexusprism machine info/list</code>,
+<code>/nexusprism energy info/network</code>, and <code>/backpack</code> commands described dead systems with no
+remaining code. See <code>modules/core.md</code>.</p>
+</blockquote>
 <hr />
-<h2 id="backpacks-waypoints">Backpacks &amp; Waypoints<a class="headerlink" href="#backpacks-waypoints" title="Permanent link">&para;</a></h2>
+<h2 id="waypoints">Waypoints<a class="headerlink" href="#waypoints" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -2265,18 +2228,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>/backpack open [id]</code></td>
-<td></td>
-<td>Open your backpack</td>
-<td><code>nexusprism.essentials.backpack</code></td>
-</tr>
-<tr>
-<td><code>/backpack list</code></td>
-<td></td>
-<td>List all backpacks</td>
-<td><code>nexusprism.essentials.backpack</code></td>
-</tr>
 <tr>
 <td><code>/waypoint create &lt;name&gt;</code></td>
 <td><code>/wp</code></td>
@@ -3294,7 +3245,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

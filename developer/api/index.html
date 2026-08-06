@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2762,6 +2762,19 @@
 
 <h1 id="nexusprism-developer-api">NexusPrism Developer API<a class="headerlink" href="#nexusprism-developer-api" title="Permanent link">&para;</a></h1>
 <p><em>Last updated: 2026-03-22</em></p>
+<blockquote>
+<p>⚠️ <strong>Partially outdated (flagged 2026-08-06, not yet rewritten).</strong> The <code>Backpacks</code>,
+<code>Energy networks</code>, <code>Item registry</code>, and <code>ResearchManager</code> sections below describe an API
+(<code>NexusPrismAPI.get().getService(...)</code>, <code>BackpackRegistry</code>, <code>EnergyRegistry</code>, <code>ItemRegistry</code>)
+that was <strong>confirmed to never actually exist in the codebase</strong> — no such service is
+registered via Bukkit's <code>ServicesManager</code> anywhere, and the underlying systems
+(<code>BackpackManager</code>, energy, research) were dead code, since removed (see
+<code>NexusATS/docs/planning/PLAN-presplit-core-infra.md</code>). That whole domain now belongs to
+NexusATS — do not build against the sections below. The generic hooks that <strong>do</strong> exist
+today are <code>NexusPrism.registerBlockClassifier()</code>, <code>registerAddonCommand()</code>/
+<code>registerAddonTabCompleter()</code>, and <code>DataManager.setPlayerField()</code>/<code>getPlayerField()</code> — see
+<code>ECOSYSTEM.md</code> at the root of the ecosystem repo for current, verified examples.</p>
+</blockquote>
 <p>This guide walks through integrating with NexusPrism from an external Bukkit/Paper plugin or a native addon JAR. You only ever compile against <code>nexusprism-api</code> — never against concrete module JARs.</p>
 <hr />
 <h2 id="step-1-add-the-dependency">Step 1 — Add the dependency<a class="headerlink" href="#step-1-add-the-dependency" title="Permanent link">&para;</a></h2>
@@ -3732,7 +3745,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

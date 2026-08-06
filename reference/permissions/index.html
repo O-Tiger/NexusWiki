@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1529,39 +1529,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#research" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Research
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Machines
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backpacks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Backpacks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#waypoints" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2082,39 +2049,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#research" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Research
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#machines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Machines
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#backpacks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Backpacks
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#waypoints" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2496,11 +2430,6 @@
 <td>OP</td>
 </tr>
 <tr>
-<td><code>nexusprism.admin.research</code></td>
-<td>Admin research commands</td>
-<td>OP</td>
-</tr>
-<tr>
 <td><code>nexusprism.admin.resourcepack</code></td>
 <td>Admin resource pack commands</td>
 <td>OP</td>
@@ -2528,84 +2457,11 @@
 </tbody>
 </table>
 <hr />
-<h2 id="research">Research<a class="headerlink" href="#research" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Permission</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>nexusprism.research</code></td>
-<td>Access research system</td>
-<td>true</td>
-</tr>
-<tr>
-<td><code>nexusprism.research.all</code></td>
-<td>Instantly unlock all research</td>
-<td>OP</td>
-</tr>
-<tr>
-<td><code>nexusprism.research.admin</code></td>
-<td>Grants access to <code>/nexusprism research</code> admin subcommands (all, tier, entry)</td>
-<td>OP</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="machines">Machines<a class="headerlink" href="#machines" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Permission</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>nexusprism.machine.remove</code></td>
-<td>Remove machines with Wrench</td>
-<td>true</td>
-</tr>
-<tr>
-<td><code>nexusprism.machine.rotate</code></td>
-<td>Rotate machines with Wrench</td>
-<td>true</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="backpacks">Backpacks<a class="headerlink" href="#backpacks" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Permission</th>
-<th>Description</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>nexusprism.backpack.create</code></td>
-<td>Create backpacks</td>
-<td>true</td>
-</tr>
-<tr>
-<td><code>nexusprism.backpack.upgrade</code></td>
-<td>Upgrade backpacks</td>
-<td>true</td>
-</tr>
-<tr>
-<td><code>nexusprism.backpack.unlimited</code></td>
-<td>Unlimited backpack slots</td>
-<td>OP</td>
-</tr>
-</tbody>
-</table>
+<blockquote>
+<p><strong>Removed 2026-08-06:</strong> the old <code>Research</code>, <code>Machines</code>, and <code>Backpacks</code> permission sections
+described dead systems with no remaining code (see <code>modules/core.md</code>). Item/machine
+permissions now belong to NexusATS.</p>
+</blockquote>
 <hr />
 <h2 id="waypoints">Waypoints<a class="headerlink" href="#waypoints" title="Permanent link">&para;</a></h2>
 <table>
@@ -2917,11 +2773,6 @@
 <td><code>nexusprism.essentials.jail.admin</code></td>
 <td>Jail management</td>
 <td>OP</td>
-</tr>
-<tr>
-<td><code>nexusprism.essentials.backpack</code></td>
-<td>Backpack commands</td>
-<td>true</td>
 </tr>
 </tbody>
 </table>
@@ -3708,7 +3559,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

@@ -31,7 +31,7 @@
       
       
       <link rel="icon" href="../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -39,7 +39,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1567,28 +1567,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mochilas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mochilas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maquinas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Máquinas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#luckperms" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1648,17 +1626,6 @@
     <span class="md-ellipsis">
       
         Discord
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guia
       
     </span>
   </a>
@@ -2010,28 +1977,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mochilas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mochilas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maquinas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Máquinas
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#luckperms" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2091,17 +2036,6 @@
     <span class="md-ellipsis">
       
         Discord
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guia" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guia
       
     </span>
   </a>
@@ -2335,6 +2269,11 @@
 </table>
 <hr />
 <h2 id="estatisticas-do-jogador">Estatísticas do Jogador<a class="headerlink" href="#estatisticas-do-jogador" title="Permanent link">&para;</a></h2>
+<p>⚠️ Placeholders de estatísticas de item/máquina/energia/pesquisa (blocos quebrados, máquinas
+colocadas, itens criados, energia gerada, pesquisa desbloqueada) foram removidos em
+2026-08-06 — a tabela <code>player_stats</code> subjacente e os sistemas que a alimentariam foram
+confirmados como código morto (nenhum código jamais persistiu ou alimentou esses valores;
+veja <code>ECOSYSTEM.md</code>). Apenas estatísticas genéricas de nível do jogador permanecem:</p>
 <table>
 <thead>
 <tr>
@@ -2344,81 +2283,10 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><code>%nexusprism_player_blocks_broken%</code></td>
-<td>Total de blocos quebrados</td>
-<td><code>48320</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_machines_placed%</code></td>
-<td>Total de máquinas colocadas</td>
-<td><code>214</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_items_crafted%</code></td>
-<td>Total de itens criados</td>
-<td><code>5630</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_energy_generated%</code></td>
-<td>Total de energia gerada (RF)</td>
-<td><code>1200000</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_items_smelted%</code></td>
-<td>Total de itens fundidos</td>
-<td><code>890</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_player_research_unlocked%</code></td>
-<td>Entradas de pesquisa desbloqueadas</td>
-<td><code>34</code></td>
-</tr>
 <tr>
 <td><code>%nexusprism_player_level%</code></td>
 <td>Nível NexusPrism do jogador</td>
 <td><code>15</code></td>
-</tr>
-<tr>
-<td><code>%nexusprism_researched_&lt;id&gt;%</code></td>
-<td><code>true</code> se uma pesquisa específica estiver desbloqueada</td>
-<td><code>true</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="mochilas">Mochilas<a class="headerlink" href="#mochilas" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Placeholder</th>
-<th>Descrição</th>
-<th>Exemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>%nexusprism_backpacks_owned%</code></td>
-<td>Número de mochilas que o jogador possui</td>
-<td><code>2</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="maquinas">Máquinas<a class="headerlink" href="#maquinas" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Placeholder</th>
-<th>Descrição</th>
-<th>Exemplo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>%nexusprism_machines_count%</code></td>
-<td>Total de máquinas colocadas pelo jogador</td>
-<td><code>42</code></td>
 </tr>
 </tbody>
 </table>
@@ -2642,23 +2510,6 @@
 </tbody>
 </table>
 <hr />
-<h2 id="guia">Guia<a class="headerlink" href="#guia" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Placeholder</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>%nexusprism_guide_&lt;id&gt;%</code></td>
-<td>Entrada dinâmica do guia para ID de item/máquina</td>
-</tr>
-</tbody>
-</table>
-<p>Esses são dinâmicos — substitua <code>&lt;id&gt;</code> por qualquer ID de item ou máquina registrado.</p>
-<hr />
 <h2 id="core-diversos">Core / Diversos<a class="headerlink" href="#core-diversos" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2784,7 +2635,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
