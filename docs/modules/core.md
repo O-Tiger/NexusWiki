@@ -1,121 +1,36 @@
 # Core Module
 
-The Core module is the foundation of NexusPrism. It manages the custom item registry, PDC (PersistentDataContainer) tagging system, machine engine, research tree, backpacks, and waypoints.
+The Core module is the foundation of NexusPrism: language system (i18n), the GUI framework,
+per-player data storage (with a generic extension API for addons), the structure-loot event
+hook, and the personal waypoint system.
 
----
-
-## Custom Item System
-
-All custom items are defined in `plugins/NexusPrism/items.yml`. The plugin ships with **2,700+ items** out of the box.
-
-### `items.yml` Example
-
-```yaml
-COPPER_DUST:
-  category: DUST
-  tier: BASIC
-  display-name: "&fCopper Dust"
-  lore:
-    - "&7A fine copper powder."
-  material: PAPER
-  custom-model-data: 1001
-  glow: false
-  stackable: true
-  max-stack: 64
-
-NEXUS_PICKAXE:
-  category: TOOL
-  tier: ADVANCED
-  display-name: "&bNexus Pickaxe"
-  lore:
-    - "&7Mines at incredible speed."
-    - "&8Tier: Advanced"
-  material: DIAMOND_PICKAXE
-  custom-model-data: 2005
-  glow: true
-  enchantments:
-    EFFICIENCY: 5
-    UNBREAKING: 3
-```
-
-### Item Categories
-
-| Category | Description |
-| --- | --- |
-| `DUST` | Crafting dusts (copper, tin, silver…) |
-| `INGOT` | Processed metal ingots |
-| `TOOL` | Custom tools and weapons |
-| `MACHINE` | Placeable machine blocks |
-| `COMPONENT` | Circuit boards, gears, etc. |
-| `RESOURCE` | Raw crafting resources |
-| `ENERGY` | Energy components |
-| `BACKPACK` | Backpack items |
-
-### Item Tiers (`NexusTier`)
-
-| Tier | Description |
-| --- | --- |
-| `BASIC` | Starter tier — no research required |
-| `ADVANCED` | Requires basic research |
-| `INFINITY` | Endgame tier — requires parchments |
+> **Item/machine/energy/research content has moved to NexusATS.** NexusPrism itself no
+> longer ships a custom item registry, machine engine, energy network, or research tree —
+> that entire domain lives in the separate NexusATS plugin now. If NexusATS is installed,
+> its commands are exposed under `/nexusprism <subcommand>` (see below); without NexusATS,
+> those subcommands are unavailable.
 
 ---
 
 ## PDC System
 
-NexusPrism uses Minecraft's **PersistentDataContainer** to tag custom items, machines, and player data. Each NexusPrism item carries a `nexusprism:id` PDC key that identifies it uniquely.
-
-Key classes:
-
-- `CustomItemRegistry` — registers and resolves all custom items
-- `NexusItemIdResolver` — resolves item IDs from PDC
-- `NexusItemMigrator` — migrates legacy items to new IDs
+NexusPrism uses Minecraft's **PersistentDataContainer** for its own player/machine-placement
+bookkeeping. Addon plugins (like NexusATS) use the same pattern for their own items and
+blocks under their own PDC namespace.
 
 ---
 
-## Research System
+## Addon Extension Hooks
 
-Players unlock items and machines by spending XP on research. Research is tiered — **Basic → Advanced → Infinity**.
+NexusPrism exposes a small set of generic hooks so addon plugins (NexusATS, and any future
+addon) can integrate without NexusPrism needing to know about them ahead of time:
 
-```yaml
-# researches.yml
-COPPER_PROCESSING:
-  tier: BASIC
-  xp-cost: 10
-  display-name: "&fCopper Processing"
-  description: "Unlock copper dust, copper ingots, and basic machines."
-  unlocks:
-    - COPPER_DUST
-    - COPPER_INGOT
-    - BASIC_CRUSHER
-```
-
-| Permission | Description |
+| Hook | Purpose |
 | --- | --- |
-| `nexusprism.research` | Use the research system (default: true) |
-| `nexusprism.research.all` | Unlock all research instantly (OP) |
-
----
-
-## Backpacks
-
-Backpacks are portable storage containers. Players start with a basic backpack and can upgrade it.
-
-### Commands
-
-| Command | Usage | Permission |
-| --- | --- | --- |
-| `/backpack open` | Open your backpack | `nexusprism.essentials.backpack` |
-| `/backpack open <id>` | Open a specific backpack | `nexusprism.essentials.backpack` |
-| `/backpack list` | List all backpacks | `nexusprism.essentials.backpack` |
-
-### Permissions
-
-| Permission | Description |
-| --- | --- |
-| `nexusprism.backpack.create` | Create backpacks (default: true) |
-| `nexusprism.backpack.upgrade` | Upgrade backpacks (default: true) |
-| `nexusprism.backpack.unlimited` | Unlimited backpack slots (OP) |
+| `NexusPrism.registerBlockClassifier(isAddonBlock, addonBlockIdLookup)` | Lets an addon mark its own blocks so RNG/traits/MMO/Waila skip or redirect on them |
+| `NexusPrism.registerAddonCommand(subCommand, handler)` | Registers a `/nexusprism <subCommand>` handler owned by the addon |
+| `NexusPrism.registerAddonTabCompleter(subCommand, completer)` | Tab-completion for an addon-registered subcommand |
+| `DataManager.setPlayerField(playerId, namespace, key, value)` / `getPlayerField(...)` / `getPlayerFields(...)` | Generic per-player key/value storage, scoped by namespace, for addons that need to persist their own data through NexusPrism's database without a schema migration |
 
 ---
 
@@ -153,13 +68,12 @@ Aliases: `/wp`
 | `/nexusprism help` | Show help | `nexusprism.command` |
 | `/nexusprism info` | Plugin info | `nexusprism.command` |
 | `/nexusprism reload` | Reload all configs | `nexusprism.admin.reload` |
-| `/nexusprism give <player> <item>` | Give a custom item | `nexusprism.admin.give` |
-| `/nexusprism guide` | Open the item guide | `nexusprism.command` |
 | `/nexusprism modules` | List loaded modules | `nexusprism.command` |
-| `/nexusprism machine info <id>` | Machine info | `nexusprism.command` |
-| `/nexusprism machine list` | List machines | `nexusprism.command` |
-| `/nexusprism energy info <loc>` | Energy node info | `nexusprism.command` |
-| `/nexusprism energy network` | Energy network view | `nexusprism.command` |
+| `/nexusprism give <player> <item>` | Give an item — requires NexusATS | `nexusprism.admin.give` |
+| `/nexusprism guide` | Open the item guide — requires NexusATS | `nexusprism.command` |
+| `/nexusprism machines` | Machine info — requires NexusATS | `nexusprism.command` |
+| `/nexusprism research` | Research menu — requires NexusATS | `nexusprism.command` |
+| `/nexusprism recipe` | Recipe lookup — requires NexusATS | `nexusprism.command` |
 
 Aliases: `/ns`, `/nexus`, `/slime`, `/nslime`
 

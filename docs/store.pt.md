@@ -16,7 +16,7 @@ O NexusPrism inclui uma bridge de loja web integrada que entrega pacotes comprad
 | **Homes adicionais** | Slots extras de home (conveniência) |
 | **Voar fora de zonas PvP** | Conveniência cosmética; desabilitado em regiões PvP |
 | **Acesso ao resource pack** | Resource pack do servidor (cosmético) |
-| **Slots extras de mochila** | Conveniência de armazenamento |
+| **Slots extras de ponto de viagem** | Conveniência — veja `nexusprism.essentials.waypoints.*` |
 | **Kit VIP (cosmético)** | Itens cosméticos, equipamento de vaidade |
 | **Chaves de crate** | Desde que todas as recompensas também possam ser obtidas em jogo |
 | **Tags de nome coloridas** | Apenas visual |

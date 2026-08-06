@@ -1,95 +1,54 @@
 # Structures Module
 
-The Structures module **injects custom loot** into vanilla structure chests. When the server generates loot for any supported structure, the module appends (or replaces) the chest contents with items defined in `structures/loot-tables.yml` — including custom NexusPrism items.
+NexusPrism owns the **hook**, not the loot content. It listens to Paper's
+`LootGenerateEvent` and dispatches to whatever addon has registered a
+[`StructureProvider`](#addon-api) — it ships no structure loot table of its own.
+
+> Previously this module had its own YAML-driven custom loot table system
+> (`structures/loot-tables.yml`). That was removed 2026-08-06 — the item-resolution part of
+> it was confirmed non-functional (always resolved to nothing), and any real loot content
+> now belongs to addon plugins via the `StructureProvider` API below. See
+> `NexusATS/docs/planning/PLAN-presplit-core-infra.md` for the design notes if you're
+> building a replacement loot-table system in NexusATS.
 
 ---
 
 ## How It Works
 
-The module listens to Paper's `LootGenerateEvent`. When a structure chest is populated, it:
-1. Identifies the structure by its loot table key
-2. Looks up the configured entry in `loot-tables.yml`
-3. Rolls the `min`–`max` additional item count and injects items by weight
+1. A structure chest generates loot (any vanilla structure, or a modded one).
+2. NexusPrism identifies the loot table key (e.g. `minecraft:chests/simple_dungeon`).
+3. Every registered `StructureProvider` is asked for extra items via `generateLoot(...)`.
+4. Whatever items the providers return are appended to the chest.
 
-No commands are needed — loot injection is fully passive.
-
----
-
-## Supported Structures
-
-| Structure | Default Injection |
-| --- | --- |
-| `minecraft:dungeon` | Research Parchment (Basic) |
-| `minecraft:mineshaft` | Research Parchment (Basic) |
-| `minecraft:desert_pyramid` | Research Parchment (Basic) |
-| `minecraft:jungle_temple` | Research Parchment (Basic) |
-| `minecraft:ocean_ruin` | Research Parchment (Basic) |
-| `minecraft:shipwreck` | Research Parchment (Basic) |
-| `minecraft:pillager_outpost` | Research Parchment (Basic) |
-| `minecraft:stronghold` | Research Parchment (Advanced) |
-| `minecraft:woodland_mansion` | Research Parchment (Advanced) |
-| `minecraft:bastion_remnant` | Research Parchment (Advanced) |
-| `minecraft:end_city` | Research Parchment (Infinity) |
-
----
-
-## Configuration (`structures/loot-tables.yml`)
-
-```yaml
-minecraft:dungeon:
-  mode: APPEND      # APPEND (add to vanilla loot) | REPLACE (clear vanilla loot first)
-  rolls:
-    min: 1
-    max: 2
-  items:
-    - material: EMERALD           # Vanilla Minecraft material
-      weight: 40
-      amount:
-        min: 1
-        max: 5
-    - material: ENCHANTED_BOOK
-      weight: 8
-      amount:
-        min: 1
-        max: 1
-      random-enchant: true        # Applies a random vanilla enchant to the book
-    - nexusprism-item: RESEARCH_PARCHMENT_BASIC   # Custom NexusPrism item by ID
-      weight: 5
-      amount:
-        min: 1
-        max: 1
-```
-
-### Configuration Fields
-
-| Field | Description |
-| --- | --- |
-| `mode` | `APPEND` — add to vanilla loot. `REPLACE` — clear vanilla loot and use only this table. |
-| `rolls.min` / `rolls.max` | Number of additional item stacks injected per chest open |
-| `items[].material` | Vanilla `Material` name |
-| `items[].nexusprism-item` | Custom NexusPrism item ID (from `items.yml`) |
-| `items[].weight` | Relative probability; higher = more common |
-| `items[].amount.min` / `.max` | Stack size range |
-| `items[].random-enchant` | If `true` and material is `ENCHANTED_BOOK`, applies a random vanilla enchantment |
-
-### Random Enchant Pool
-
-When `random-enchant: true` is set, one of these enchantments is applied at a random valid level:
-
-`SHARPNESS`, `PROTECTION`, `EFFICIENCY`, `SILK_TOUCH`, `FORTUNE`, `LOOTING`, `FLAME`, `POWER`, `INFINITY`, `MENDING`, `UNBREAKING`
+No commands, no config file — loot injection is fully passive and entirely addon-driven.
 
 ---
 
 ## Addon API
 
-Other plugins can register custom loot providers via the `StructureRegistry`:
+Addon plugins register a custom loot provider via `StructureRegistry`
+(`io.github.otiger.nexusprism.api.structures`):
 
 ```java
-// Register during onEnable
+public class MyStructureProvider implements StructureProvider {
+    @Override
+    public String getProviderId() { return "my_addon"; }
+
+    @Override
+    public List<ItemStack> generateLoot(String lootTableKey, Inventory inventory, Random rng) {
+        if (!handles(lootTableKey)) return List.of();
+        // ... roll your own loot table here ...
+        return List.of(myItem);
+    }
+}
+
+// onEnable():
 StructureRegistry.register(new MyStructureProvider());
 
-// Unregister during onDisable
+// onDisable():
 StructureRegistry.unregister(provider);
 ```
 
-The provider receives the loot table ID, the inventory holder, and a `Random` instance, and returns additional `ItemStack` additions alongside the YAML-defined entries.
+`generateLoot` receives the full loot table key, the chest inventory (read-only reference),
+and a seeded `Random` — everything needed to implement any custom loot table format
+independently, without NexusPrism needing to know about it.

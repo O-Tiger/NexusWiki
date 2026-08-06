@@ -1,5 +1,10 @@
 # Referencia PlaceholderAPI
 
+> ⚠️ **Traducción desactualizada (marcada 2026-08-06).** Los placeholders de
+> mochilas/máquinas/energía/investigación fueron eliminados de la versión en inglés (código
+> muerto). Revisar `reference/placeholders.md` (inglés) o `reference/placeholders.pt.md`
+> (portugués) para el contenido actualizado.
+
 NexusPrism registra su propia expansión PlaceholderAPI bajo el identificador `nexusprism`. Todos los placeholders siguen el patrón `%nexusprism_<nombre>%`.
 
 **Requiere:** [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) (dependencia suave — instálalo por separado)

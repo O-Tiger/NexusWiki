@@ -6,7 +6,7 @@ O NexusPrism é organizado em **módulos de funcionalidades**, cada um gerencian
 
 | Módulo | Descrição |
 | --- | --- |
-| [Core](core.md) | Itens personalizados, sistema PDC, registro de itens, mochilas, waypoints |
+| [Core](core.md) | i18n, framework de GUI, armazenamento de dados por jogador, hooks de extensão para addons, waypoints |
 | [Essenciais](essentials.md) | Homes, warps, TPA, AFK, prisão, +40 comandos QoL |
 | [Economia](economy.md) | Dinheiro, créditos, /sell, /worth, /baltop |
 | [Clãs](clans.md) | Criação de clã, território, melhorias, baú de clã, chat de clã |
@@ -19,7 +19,7 @@ O NexusPrism é organizado em **módulos de funcionalidades**, cada um gerencian
 | [MMO](mmo.md) | Pontos de atributo, 6 árvores de habilidade, 18 habilidades ativas, 8 profissões com passivas |
 | [Proteções](protections.md) | Reivindicação de regiões estilo WorldGuard, 28 flags de proteção, duelo |
 | [Mobs Personalizados](custom-mobs.md) | Chefes definidos em YAML com tabelas de loot, formas de IA e ovos de spawn |
-| [Crafting Infinito](infinity-crafting.md) | Estações de crafting multibloco com formato de receita YAML |
+| [Crafting Infinito](infinity-crafting.md) | Removido — sistema morto, nunca finalizado |
 | [Integração Twitch](twitch.md) | Vinculação de conta, alertas ao vivo, relay de chat, sorteios para espectadores |
 | [TAB](tab.md) | Cabeçalho/rodapé da lista TAB, prefixo de rank, ping, placar, MOTD |
 | [Chat](chat.md) | Sistema de 4 canais (local, global, staff, report) com prefixo do LuckPerms |
@@ -28,7 +28,7 @@ O NexusPrism é organizado em **módulos de funcionalidades**, cada um gerencian
 | [RNG](rng.md) | Giro diário, blocos de sorte, gacha via Pergaminhos de Pesquisa, eventos de servidor |
 | [Caixas](crates.md) | Caixas de loot com chaves, animações de abertura e tabelas de recompensas por caixa |
 | [Encantamentos](enchantments.md) | 175 encantamentos personalizados, 6 raridades, 10 tipos de gatilho, definidos em YAML |
-| [Armazenamento ME](ae.md) | Sistema de armazenamento em rede estilo Applied Energistics |
-| [Energia](energy.md) | Grade de energia em Joules — geradores, capacitores, cabos e integração com máquinas |
-| [Estruturas](structures.md) | Injeção de loot personalizado em 11 tipos de estruturas vanilla |
+| [Armazenamento ME](ae.md) | Removido — código morto, nunca conectado |
+| [Energia](energy.md) | Removido — código morto, anterior à separação do NexusATS |
+| [Estruturas](structures.md) | Hook de loot de estruturas controlado por addons — sem loot próprio |
 | [Web & LGPD](web.md) | Integração com loja virtual, entrega de kits VIP, webhooks de pagamento, conformidade LGPD |

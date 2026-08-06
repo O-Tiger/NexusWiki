@@ -6,7 +6,7 @@ NexusPrism is organized into **feature modules**, each handling a distinct gamep
 
 | Module | Description |
 | --- | --- |
-| [Core](core.md) | Custom items, PDC system, item registry, backpacks, waypoints |
+| [Core](core.md) | i18n, GUI framework, per-player data storage, addon extension hooks, waypoints |
 | [Essentials](essentials.md) | Homes, warps, TPA, AFK, jail, 40+ QoL commands |
 | [Economy](economy.md) | Money, /sell, /worth, /baltop |
 | [Clans](clans.md) | Clan creation, territory, upgrades, clan chest, clan chat |
@@ -19,7 +19,7 @@ NexusPrism is organized into **feature modules**, each handling a distinct gamep
 | [MMO](mmo.md) | Stat points, 6 skill trees, 18 active abilities, 8 professions with mastery passives |
 | [Protections](protections.md) | WorldGuard-style region claims, 28 protection flags, duel system |
 | [Custom Mobs](custom-mobs.md) | YAML-defined bosses with loot tables, AI forms, and spawn eggs |
-| [Infinity Crafting](infinity-crafting.md) | Multiblock crafting stations with YAML recipe format |
+| [Infinity Crafting](infinity-crafting.md) | Removed — dead system, never fully shipped |
 | [Twitch Integration](twitch.md) | Account linking, live alerts, chat relay, viewer giveaways |
 | [TAB](tab.md) | TAB list header/footer, rank prefix, ping display, scoreboards, MOTD |
 | [Chat](chat.md) | 4-channel chat system (local, global, staff, report) with LuckPerms prefix |
@@ -28,7 +28,7 @@ NexusPrism is organized into **feature modules**, each handling a distinct gamep
 | [RNG](rng.md) | Daily spin, lucky blocks, gacha via Research Parchments, server events |
 | [Crates](crates.md) | Key-based loot crates with animated openings and per-crate reward tables |
 | [Enchantments](enchantments.md) | 175 custom enchants, 6 rarities, 10 trigger types, YAML-defined |
-| [ME Storage](ae.md) | Applied Energistics-style network storage with cables, drives, and terminals |
-| [Energy](energy.md) | Joule-based power grid — generators, capacitors, cables, machine integration |
-| [Structures](structures.md) | Custom loot injection into 11 vanilla structure chest types |
+| [ME Storage](ae.md) | Removed — dead code, never wired up |
+| [Energy](energy.md) | Removed — dead code, pre-dates the NexusATS split |
+| [Structures](structures.md) | Addon-driven structure loot hook — no loot content of its own |
 | [Web & GDPR](web.md) | Webstore integration, VIP kit delivery, payment webhooks, GDPR compliance |

@@ -1,5 +1,9 @@
 # Módulo ME Storage
 
+> ⚠️ **Eliminado el 2026-08-06.** Este sistema fue confirmado como código muerto — nunca
+> conectado a ningún listener o comando. Ver `modules/ae.md` (inglés) o `modules/ae.pt.md`
+> (portugués) para la nota de eliminación completa.
+
 El módulo ME Storage es un **sistema de almacenamiento en red estilo Applied Energistics**. Coloca un ME Controller, conecta drives y terminales mediante cables y gestiona miles de ítems a través de una única interfaz unificada.
 
 ---

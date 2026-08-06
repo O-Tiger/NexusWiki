@@ -52,7 +52,7 @@ kits:
     items:
       - material: DIAMOND
         amount: 5
-      - nexusprism-item: RESEARCH_PARCHMENT_BASIC
+      - material: GOLDEN_APPLE
         amount: 1
     commands:
       - "lp user {player} group set vip"

@@ -1,127 +1,43 @@
 # Módulo Core
 
-O módulo Core é a base do NexusPrism. Ele gerencia o registro de itens personalizados, o sistema de marcação PDC (PersistentDataContainer), o motor de máquinas, a árvore de pesquisa, mochilas e pontos de viagem.
+O módulo Core é a base do NexusPrism: sistema de idiomas (i18n), o framework de GUI,
+armazenamento de dados por jogador (com uma API genérica de extensão para addons), o hook do
+evento de loot de estruturas, e o sistema pessoal de pontos de viagem.
 
----
-
-## Sistema de Itens Personalizados
-
-Todos os itens personalizados são definidos em `plugins/NexusPrism/items.yml`. O plugin já vem com **mais de 500 itens** de fábrica.
-
-### Exemplo de `items.yml`
-
-```yaml
-COPPER_DUST:
-  category: DUST
-  tier: BASIC
-  display-name: "&fCopper Dust"
-  lore:
-    - "&7A fine copper powder."
-  material: PAPER
-  custom-model-data: 1001
-  glow: false
-  stackable: true
-  max-stack: 64
-
-NEXUS_PICKAXE:
-  category: TOOL
-  tier: ADVANCED
-  display-name: "&bNexus Pickaxe"
-  lore:
-    - "&7Mines at incredible speed."
-    - "&8Tier: Advanced"
-  material: DIAMOND_PICKAXE
-  custom-model-data: 2005
-  glow: true
-  enchantments:
-    EFFICIENCY: 5
-    UNBREAKING: 3
-```
-
-### Categorias de Itens
-
-| Categoria | Descrição |
-| --- | --- |
-| `DUST` | Pós de crafting (cobre, estanho, prata…) |
-| `INGOT` | Lingotes de metal processados |
-| `TOOL` | Ferramentas e armas personalizadas |
-| `MACHINE` | Blocos de máquina posicionáveis |
-| `COMPONENT` | Placas de circuito, engrenagens, etc. |
-| `RESOURCE` | Recursos brutos de crafting |
-| `ENERGY` | Componentes de energia |
-| `BACKPACK` | Itens de mochila |
-
-### Tiers de Itens (`NexusTier`)
-
-| Tier | Descrição |
-| --- | --- |
-| `BASIC` | Tier inicial — sem pesquisa necessária |
-| `ADVANCED` | Requer pesquisa básica |
-| `INFINITY` | Tier final — requer pergaminhos |
+> **O conteúdo de itens/máquinas/energia/pesquisa foi movido para o NexusATS.** O NexusPrism
+> em si não fornece mais um registro de itens personalizados, motor de máquinas, rede de
+> energia ou árvore de pesquisa — todo esse domínio agora vive no plugin separado NexusATS.
+> Se o NexusATS estiver instalado, seus comandos ficam disponíveis sob `/nexusprism
+> <subcomando>` (veja abaixo); sem o NexusATS, esses subcomandos ficam indisponíveis.
 
 ---
 
 ## Sistema PDC
 
-O NexusPrism usa o **PersistentDataContainer** do Minecraft para marcar itens personalizados, máquinas e dados de jogadores. Cada item do NexusPrism carrega uma chave PDC `nexusprism:id` que o identifica de forma única.
-
-Classes principais:
-
-- `CustomItemRegistry` — registra e resolve todos os itens personalizados
-- `NexusItemIdResolver` — resolve IDs de itens do PDC
-- `NexusItemMigrator` — migra itens legados para novos IDs
+O NexusPrism usa o **PersistentDataContainer** do Minecraft para sua própria gestão de
+dados de jogador/posicionamento de máquinas. Addons (como o NexusATS) usam o mesmo padrão
+para seus próprios itens e blocos, sob seu próprio namespace de PDC.
 
 ---
 
-## Sistema de Pesquisa
+## Hooks de Extensão para Addons
 
-Os jogadores desbloqueiam itens e máquinas gastando XP em pesquisa. A pesquisa é escalonada — **Básica → Avançada → Infinity**.
+O NexusPrism expõe um pequeno conjunto de hooks genéricos para que addons (NexusATS, e
+qualquer addon futuro) possam se integrar sem que o NexusPrism precise conhecê-los de
+antemão:
 
-```yaml
-# researches.yml
-COPPER_PROCESSING:
-  tier: BASIC
-  xp-cost: 10
-  display-name: "&fCopper Processing"
-  description: "Unlock copper dust, copper ingots, and basic machines."
-  unlocks:
-    - COPPER_DUST
-    - COPPER_INGOT
-    - BASIC_CRUSHER
-```
-
-| Permissão | Descrição |
+| Hook | Finalidade |
 | --- | --- |
-| `nexusprism.research` | Usar o sistema de pesquisa (padrão: true) |
-| `nexusprism.research.all` | Desbloquear toda a pesquisa instantaneamente (OP) |
-
----
-
-## Mochilas
-
-Mochilas são recipientes de armazenamento portáteis. Os jogadores começam com uma mochila básica e podem atualizá-la.
-
-### Comandos
-
-| Comando | Uso | Permissão |
-| --- | --- | --- |
-| `/backpack open` | Abrir sua mochila | `nexusprism.essentials.backpack` |
-| `/backpack open <id>` | Abrir uma mochila específica | `nexusprism.essentials.backpack` |
-| `/backpack list` | Listar todas as mochilas | `nexusprism.essentials.backpack` |
-
-### Permissões
-
-| Permissão | Descrição |
-| --- | --- |
-| `nexusprism.backpack.create` | Criar mochilas (padrão: true) |
-| `nexusprism.backpack.upgrade` | Atualizar mochilas (padrão: true) |
-| `nexusprism.backpack.unlimited` | Slots ilimitados de mochila (OP) |
+| `NexusPrism.registerBlockClassifier(isAddonBlock, addonBlockIdLookup)` | Permite que um addon marque seus próprios blocos para que RNG/traits/MMO/Waila os ignorem ou redirecionem sobre eles |
+| `NexusPrism.registerAddonCommand(subCommand, handler)` | Registra um handler de `/nexusprism <subCommand>` pertencente ao addon |
+| `NexusPrism.registerAddonTabCompleter(subCommand, completer)` | Auto-completar para um subcomando registrado por addon |
+| `DataManager.setPlayerField(playerId, namespace, key, value)` / `getPlayerField(...)` / `getPlayerFields(...)` | Armazenamento genérico de chave/valor por jogador, isolado por namespace, para addons que precisam persistir seus próprios dados através do banco de dados do NexusPrism sem migração de schema |
 
 ---
 
 ## Pontos de Viagem
 
-Pontos de viagem são pontos de viagem rápida pessoais salvos pelo jogador.
+Pontos de viagem são pontos pessoais de teleporte rápido salvos pelo jogador.
 
 ### Comandos de Pontos de Viagem
 
@@ -153,13 +69,12 @@ Aliases: `/wp`
 | `/nexusprism help` | Mostrar ajuda | `nexusprism.command` |
 | `/nexusprism info` | Informações do plugin | `nexusprism.command` |
 | `/nexusprism reload` | Recarregar todas as configurações | `nexusprism.admin.reload` |
-| `/nexusprism give <jogador> <item>` | Dar um item personalizado | `nexusprism.admin.give` |
-| `/nexusprism guide` | Abrir o guia de itens | `nexusprism.command` |
 | `/nexusprism modules` | Listar módulos carregados | `nexusprism.command` |
-| `/nexusprism machine info <id>` | Informações da máquina | `nexusprism.command` |
-| `/nexusprism machine list` | Listar máquinas | `nexusprism.command` |
-| `/nexusprism energy info <loc>` | Informações do nó de energia | `nexusprism.command` |
-| `/nexusprism energy network` | Visualização da rede de energia | `nexusprism.command` |
+| `/nexusprism give <jogador> <item>` | Dar um item — requer NexusATS | `nexusprism.admin.give` |
+| `/nexusprism guide` | Abrir o guia de itens — requer NexusATS | `nexusprism.command` |
+| `/nexusprism machines` | Informações de máquina — requer NexusATS | `nexusprism.command` |
+| `/nexusprism research` | Menu de pesquisa — requer NexusATS | `nexusprism.command` |
+| `/nexusprism recipe` | Consulta de receitas — requer NexusATS | `nexusprism.command` |
 
 Aliases: `/ns`, `/nexus`, `/slime`, `/nslime`
 

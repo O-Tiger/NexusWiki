@@ -18,29 +18,23 @@ Lista completa de todos os comandos registrados pelo NexusPrism, organizados por
 | `/nexusprism help` | `/ns`, `/nexus`, `/slime` | Mostrar ajuda | `nexusprism.command` |
 | `/nexusprism info` | | Versão e status do plugin | `nexusprism.command` |
 | `/nexusprism reload` | | Recarregar todas as configurações | `nexusprism.admin.reload` |
-| `/nexusprism give <player> <item>` | | Dar um item personalizado | `nexusprism.admin.give` |
-| `/nexusprism guide` | | Abrir GUI do guia de itens | `nexusprism.command` |
+| `/nexusprism give <player> <item>` | | Dar um item — requer NexusATS | `nexusprism.admin.give` |
+| `/nexusprism guide` | | Abrir guia de itens — requer NexusATS | `nexusprism.command` |
 | `/nexusprism modules` | | Listar todos os módulos carregados | `nexusprism.command` |
-| `/nexusprism machine info <id>` | | Detalhes da máquina | `nexusprism.command` |
-| `/nexusprism machine list` | | Listar todas as máquinas | `nexusprism.command` |
-| `/nexusprism energy info <x,y,z>` | | Informações do nó de energia | `nexusprism.command` |
-| `/nexusprism energy network` | | Ver rede de energia | `nexusprism.command` |
-| `/research` | | Ver progresso de pesquisa | `nexusprism.research` |
-| `/research list [tier]` | | Listar pesquisas por tier | `nexusprism.research` |
-| `/research <item-id>` | | Verificar pesquisa específica | `nexusprism.research` |
-| `/nexusprism research all <player>` | | Desbloquear todas as pesquisas para um jogador | `nexusprism.research.admin` |
-| `/nexusprism research tier <player> <tier>` | | Desbloquear todas as pesquisas de um tier | `nexusprism.research.admin` |
-| `/nexusprism research entry <player> <entry-id>` | | Desbloquear uma entrada de pesquisa específica | `nexusprism.research.admin` |
+| `/nexusprism machines` | | Informações de máquina — requer NexusATS | `nexusprism.command` |
+| `/nexusprism research` | | Menu de pesquisa — requer NexusATS | `nexusprism.command` |
 | `/recipe <item>` | | Mostrar receita(s) de crafting | `nexusprism.recipe` |
+
+> **Removido em 2026-08-06:** `/research` avulso, `/nexusprism machine info/list`,
+> `/nexusprism energy info/network` e comandos `/backpack` descreviam sistemas mortos, sem
+> nenhum código restante. Veja `modules/core.md`.
 
 ---
 
-## Mochilas & Pontos de Viagem
+## Pontos de Viagem
 
 | Comando | Aliases | Descrição | Permissão |
 | --- | --- | --- | --- |
-| `/backpack open [id]` | | Abrir sua mochila | `nexusprism.essentials.backpack` |
-| `/backpack list` | | Listar todas as mochilas | `nexusprism.essentials.backpack` |
 | `/waypoint create <name>` | `/wp` | Criar um ponto de viagem | `nexusprism.essentials.waypoint` |
 | `/waypoint delete <name>` | `/wp` | Excluir um ponto de viagem | `nexusprism.essentials.waypoint` |
 | `/waypoint list` | `/wp` | Listar todos os pontos de viagem | `nexusprism.essentials.waypoint` |

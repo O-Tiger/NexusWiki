@@ -21,7 +21,6 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | `nexusprism.admin.bypass` | Bypass various admin checks | OP |
 | `nexusprism.admin.delivery` | Manage delivery/store orders | OP |
 | `nexusprism.admin.recipe` | Admin recipe commands | OP |
-| `nexusprism.admin.research` | Admin research commands | OP |
 | `nexusprism.admin.resourcepack` | Admin resource pack commands | OP |
 | `nexusprism.admin.waila` | Admin WAILA tooltip commands | OP |
 | `nexusprism.bypass.protection` | Bypass all region protections | OP |
@@ -30,32 +29,9 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 
 ---
 
-## Research
-
-| Permission | Description | Default |
-| --- | --- | --- |
-| `nexusprism.research` | Access research system | true |
-| `nexusprism.research.all` | Instantly unlock all research | OP |
-| `nexusprism.research.admin` | Grants access to `/nexusprism research` admin subcommands (all, tier, entry) | OP |
-
----
-
-## Machines
-
-| Permission | Description | Default |
-| --- | --- | --- |
-| `nexusprism.machine.remove` | Remove machines with Wrench | true |
-| `nexusprism.machine.rotate` | Rotate machines with Wrench | true |
-
----
-
-## Backpacks
-
-| Permission | Description | Default |
-| --- | --- | --- |
-| `nexusprism.backpack.create` | Create backpacks | true |
-| `nexusprism.backpack.upgrade` | Upgrade backpacks | true |
-| `nexusprism.backpack.unlimited` | Unlimited backpack slots | OP |
+> **Removed 2026-08-06:** the old `Research`, `Machines`, and `Backpacks` permission sections
+> described dead systems with no remaining code (see `modules/core.md`). Item/machine
+> permissions now belong to NexusATS.
 
 ---
 
@@ -132,7 +108,6 @@ Complete list of all permission nodes registered by NexusPrism. Nodes marked **O
 | `nexusprism.essentials.rules` | `/rules` | true |
 | `nexusprism.essentials.skull` | `/skull` | OP |
 | `nexusprism.essentials.jail.admin` | Jail management | OP |
-| `nexusprism.essentials.backpack` | Backpack commands | true |
 
 ---
 

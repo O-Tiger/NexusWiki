@@ -1,5 +1,9 @@
 # Módulos
 
+> ⚠️ **Traducción desactualizada (marcada 2026-08-06).** Las filas de Core, Infinity
+> Crafting, ME Storage y Energy fueron actualizadas en la versión en inglés (código muerto
+> eliminado). Revisar `modules/index.md` (inglés) o `modules/index.pt.md` (portugués).
+
 NexusPrism está organizado en **módulos de funcionalidades**, cada uno gestionando un sistema de juego distinto. Todos los módulos están incluidos en el JAR final y habilitados por defecto.
 
 ---

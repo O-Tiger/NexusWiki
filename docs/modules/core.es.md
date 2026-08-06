@@ -1,5 +1,10 @@
 # Módulo Core
 
+> ⚠️ **Traducción desactualizada (marcada 2026-08-06).** La versión en inglés de esta página
+> fue reescrita: el registro de ítems, mochilas, energía e investigación fueron eliminados
+> (código muerto) y ahora pertenecen a NexusATS. Esta traducción aún describe el sistema
+> antiguo — revisar `modules/core.md` (inglés) o `modules/core.pt.md` (portugués).
+
 El módulo Core es la base de NexusPrism. Gestiona el registro de ítems personalizados, el sistema de etiquetado PDC (PersistentDataContainer), el motor de máquinas, el árbol de investigación, mochilas y puntos de viaje.
 
 ---

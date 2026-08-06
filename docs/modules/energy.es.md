@@ -1,6 +1,8 @@
 # Módulo Energy
 
-El módulo Energy proporciona una **red de energía basada en Julios** para las máquinas. Los generadores producen energía, los capacitores la almacenan y los cables la transportan.
+> ⚠️ **Eliminado el 2026-08-06.** Este sistema fue confirmado como código muerto — no
+> existe ningún `EnergyManager` en el código. Ver `modules/energy.md` (inglés) o
+> `modules/energy.pt.md` (portugués) para la nota de eliminación completa.
 
 ---
 

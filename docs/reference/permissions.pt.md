@@ -20,23 +20,9 @@ Lista completa de todos os nós de permissão registrados pelo NexusPrism. Nós 
 
 ---
 
-## Pesquisa
-
-| Permissão | Descrição | Padrão |
-| --- | --- | --- |
-| `nexusprism.research` | Acessar sistema de pesquisa | true |
-| `nexusprism.research.all` | Desbloquear toda pesquisa instantaneamente | OP |
-| `nexusprism.research.admin` | Concede acesso aos subcomandos administrativos de `/nexusprism research` (all, tier, entry) | OP |
-
----
-
-## Mochilas
-
-| Permissão | Descrição | Padrão |
-| --- | --- | --- |
-| `nexusprism.backpack.create` | Criar mochilas | true |
-| `nexusprism.backpack.upgrade` | Atualizar mochilas | true |
-| `nexusprism.backpack.unlimited` | Slots ilimitados de mochila | OP |
+> **Removido em 2026-08-06:** as antigas seções `Pesquisa`, `Máquinas` e `Mochilas`
+> descreviam sistemas mortos, sem nenhum código restante (veja `modules/core.md`). Permissões
+> de item/máquina agora pertencem ao NexusATS.
 
 ---
 
@@ -110,7 +96,6 @@ Lista completa de todos os nós de permissão registrados pelo NexusPrism. Nós 
 | `nexusprism.essentials.rules` | `/rules` | true |
 | `nexusprism.essentials.skull` | `/skull` | OP |
 | `nexusprism.essentials.jail.admin` | Gerenciamento de prisão | OP |
-| `nexusprism.essentials.backpack` | Comandos de mochila | true |
 
 ---
 

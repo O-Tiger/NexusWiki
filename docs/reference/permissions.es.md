@@ -1,5 +1,10 @@
 # Referencia de Permisos
 
+> ⚠️ **Traducción desactualizada (marcada 2026-08-06).** Las secciones `Research`,
+> `Machines` y `Backpacks` fueron eliminadas de la versión en inglés (código muerto). Revisar
+> `reference/permissions.md` (inglés) o `reference/permissions.pt.md` (portugués) para el
+> contenido actualizado.
+
 Lista completa de todos los nodos de permisos registrados por NexusPrism. Los nodos marcados como **OP** son por defecto solo para operadores; los nodos marcados como **true** se otorgan a todos los jugadores por defecto.
 
 ---

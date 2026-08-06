@@ -1,5 +1,10 @@
 # Módulo Infinity Crafting
 
+> ⚠️ **Eliminado el 2026-08-06.** Este sistema fue confirmado como código muerto — nunca
+> se implementó ningún `RecipeManager` ni cargador de recetas. Ver
+> `modules/infinity-crafting.md` (inglés) o `modules/infinity-crafting.pt.md` (portugués)
+> para la nota de eliminación completa.
+
 Infinity Crafting es el **sistema de crafteo multibloques** de NexusPrism. Los jugadores construyen estructuras multibloques físicas en el mundo y las usan como estaciones de crafteo avanzadas. Las recetas se definen íntegramente en YAML.
 
 ---

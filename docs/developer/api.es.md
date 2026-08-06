@@ -2,6 +2,12 @@
 
 *Última actualización: 2026-03-22*
 
+> ⚠️ **Traducción desactualizada (marcada 2026-08-06).** La versión en inglés de esta página
+> fue corregida para señalar que las secciones `Backpacks`, `Energy networks`, `Item
+> registry` y `ResearchManager` describen una API que nunca existió realmente en el código.
+> Esta traducción española aún no fue sincronizada — revisar `developer/api.md` (inglés) o
+> `developer/api.pt.md` (portugués) para el contenido actualizado.
+
 Esta guía explica cómo integrarse con NexusPrism desde un plugin externo de Bukkit/Paper o un addon nativo. Solo compilas contra `nexusprism-api` — nunca contra los JARs concretos de los módulos.
 
 ---

@@ -19,28 +19,23 @@ Complete list of all commands registered by NexusPrism, organized by module.
 | `/nexusprism info` | | Plugin version and status | `nexusprism.command` |
 | `/nexusprism reload` | | Reload all configs | `nexusprism.admin.reload` |
 | `/nexusprism give <player> <item>` | | Give a custom item | `nexusprism.admin.give` |
-| `/nexusprism guide` | | Open item guide GUI | `nexusprism.command` |
+| `/nexusprism give <player> <item>` | | Give an item — requires NexusATS | `nexusprism.admin.give` |
+| `/nexusprism guide` | | Open item guide — requires NexusATS | `nexusprism.command` |
 | `/nexusprism modules` | | List all loaded modules | `nexusprism.command` |
-| `/nexusprism machine info <id>` | | Machine details | `nexusprism.command` |
-| `/nexusprism machine list` | | List all machines | `nexusprism.command` |
-| `/nexusprism energy info <x,y,z>` | | Energy node info | `nexusprism.command` |
-| `/nexusprism energy network` | | View energy network | `nexusprism.command` |
-| `/research` | | View your research progress | `nexusprism.research` |
-| `/research list [tier]` | | List research by tier | `nexusprism.research` |
-| `/research <item-id>` | | Check specific research | `nexusprism.research` |
-| `/nexusprism research all <player>` | | Unlock all researches for a player | `nexusprism.research.admin` |
-| `/nexusprism research tier <player> <tier>` | | Unlock all researches of a tier | `nexusprism.research.admin` |
-| `/nexusprism research entry <player> <entry-id>` | | Unlock a specific research entry | `nexusprism.research.admin` |
+| `/nexusprism machines` | | Machine info — requires NexusATS | `nexusprism.command` |
+| `/nexusprism research` | | Research menu — requires NexusATS | `nexusprism.command` |
 | `/recipe <item>` | | Show crafting recipe(s) | `nexusprism.recipe` |
+
+> **Removed 2026-08-06:** standalone `/research`, `/nexusprism machine info/list`,
+> `/nexusprism energy info/network`, and `/backpack` commands described dead systems with no
+> remaining code. See `modules/core.md`.
 
 ---
 
-## Backpacks & Waypoints
+## Waypoints
 
 | Command | Aliases | Description | Permission |
 | --- | --- | --- | --- |
-| `/backpack open [id]` | | Open your backpack | `nexusprism.essentials.backpack` |
-| `/backpack list` | | List all backpacks | `nexusprism.essentials.backpack` |
 | `/waypoint create <name>` | `/wp` | Create a waypoint | `nexusprism.essentials.waypoint` |
 | `/waypoint delete <name>` | `/wp` | Delete a waypoint | `nexusprism.essentials.waypoint` |
 | `/waypoint list` | `/wp` | List all waypoints | `nexusprism.essentials.waypoint` |

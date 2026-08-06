@@ -18,7 +18,7 @@ The following features are safely offered in a store under the Minecraft EULA:
 | **Additional homes** | Extra home slots (convenience, not power) |
 | **Fly in non-PvP zones** | Cosmetic convenience; disabled in PvP regions |
 | **Resource pack access** | Server resource pack (cosmetic) |
-| **Extra backpack slots** | Storage convenience |
+| **Extra waypoint slots** | Convenience — see `nexusprism.essentials.waypoints.*` |
 | **VIP kit (cosmetic)** | Cosmetic items, vanity gear — no enchanted diamond armor |
 | **Crate keys** | As long as all crate rewards can also be earned in-game |
 | **Colored name tags** | Visual only |

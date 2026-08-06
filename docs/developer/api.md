@@ -2,6 +2,18 @@
 
 *Last updated: 2026-03-22*
 
+> ⚠️ **Partially outdated (flagged 2026-08-06, not yet rewritten).** The `Backpacks`,
+> `Energy networks`, `Item registry`, and `ResearchManager` sections below describe an API
+> (`NexusPrismAPI.get().getService(...)`, `BackpackRegistry`, `EnergyRegistry`, `ItemRegistry`)
+> that was **confirmed to never actually exist in the codebase** — no such service is
+> registered via Bukkit's `ServicesManager` anywhere, and the underlying systems
+> (`BackpackManager`, energy, research) were dead code, since removed (see
+> `NexusATS/docs/planning/PLAN-presplit-core-infra.md`). That whole domain now belongs to
+> NexusATS — do not build against the sections below. The generic hooks that **do** exist
+> today are `NexusPrism.registerBlockClassifier()`, `registerAddonCommand()`/
+> `registerAddonTabCompleter()`, and `DataManager.setPlayerField()`/`getPlayerField()` — see
+> `ECOSYSTEM.md` at the root of the ecosystem repo for current, verified examples.
+
 This guide walks through integrating with NexusPrism from an external Bukkit/Paper plugin or a native addon JAR. You only ever compile against `nexusprism-api` — never against concrete module JARs.
 
 ---

@@ -2,6 +2,19 @@
 
 *Última atualização: 2026-03-22*
 
+> ⚠️ **Parcialmente desatualizado (sinalizado em 2026-08-06, ainda não reescrito por completo).**
+> As seções `Mochilas`, `Redes de Energia`, `Registro de itens` e `ResearchManager` abaixo
+> descrevem uma API (`NexusPrismAPI.get().getService(...)`, `BackpackRegistry`,
+> `EnergyRegistry`, `ItemRegistry`) que foi **confirmada como nunca ter existido de fato no
+> código** — nenhum serviço desses é registrado via `ServicesManager` do Bukkit em lugar
+> nenhum, e os sistemas subjacentes (`BackpackManager`, energia, pesquisa) eram código morto,
+> já removido (veja `NexusATS/docs/planning/PLAN-presplit-core-infra.md`). Todo esse domínio
+> agora pertence ao NexusATS — não construa integrações contra as seções abaixo. Os hooks
+> genéricos que **de fato existem** hoje são `NexusPrism.registerBlockClassifier()`,
+> `registerAddonCommand()`/`registerAddonTabCompleter()` e
+> `DataManager.setPlayerField()`/`getPlayerField()` — veja o `ECOSYSTEM.md` na raiz do
+> repositório do ecossistema para exemplos reais e atualizados.
+
 Este guia mostra como integrar com o NexusPrism a partir de um plugin Bukkit/Paper externo ou de um addon nativo. Você compila apenas contra `nexusprism-api` — nunca contra os JARs concretos dos módulos.
 
 ---

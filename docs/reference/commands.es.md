@@ -1,5 +1,10 @@
 # Referencia de Comandos
 
+> ⚠️ **Traducción desactualizada (marcada 2026-08-06).** Comandos de `/research`,
+> `/backpack`, `machine info/list` y `energy info/network` fueron eliminados de la versión
+> en inglés (código muerto). Revisar `reference/commands.md` (inglés) o
+> `reference/commands.pt.md` (portugués) para el contenido actualizado.
+
 Lista completa de todos los comandos registrados por NexusPrism, organizados por módulo.
 
 **Leyenda:**

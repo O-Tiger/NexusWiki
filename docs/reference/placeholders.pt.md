@@ -74,32 +74,15 @@ Retorna string vazia se o jogador não estiver em um jogo de Crystal Defense.
 
 ## Estatísticas do Jogador
 
+⚠️ Placeholders de estatísticas de item/máquina/energia/pesquisa (blocos quebrados, máquinas
+colocadas, itens criados, energia gerada, pesquisa desbloqueada) foram removidos em
+2026-08-06 — a tabela `player_stats` subjacente e os sistemas que a alimentariam foram
+confirmados como código morto (nenhum código jamais persistiu ou alimentou esses valores;
+veja `ECOSYSTEM.md`). Apenas estatísticas genéricas de nível do jogador permanecem:
+
 | Placeholder | Descrição | Exemplo |
 | --- | --- | --- |
-| `%nexusprism_player_blocks_broken%` | Total de blocos quebrados | `48320` |
-| `%nexusprism_player_machines_placed%` | Total de máquinas colocadas | `214` |
-| `%nexusprism_player_items_crafted%` | Total de itens criados | `5630` |
-| `%nexusprism_player_energy_generated%` | Total de energia gerada (RF) | `1200000` |
-| `%nexusprism_player_items_smelted%` | Total de itens fundidos | `890` |
-| `%nexusprism_player_research_unlocked%` | Entradas de pesquisa desbloqueadas | `34` |
 | `%nexusprism_player_level%` | Nível NexusPrism do jogador | `15` |
-| `%nexusprism_researched_<id>%` | `true` se uma pesquisa específica estiver desbloqueada | `true` |
-
----
-
-## Mochilas
-
-| Placeholder | Descrição | Exemplo |
-| --- | --- | --- |
-| `%nexusprism_backpacks_owned%` | Número de mochilas que o jogador possui | `2` |
-
----
-
-## Máquinas
-
-| Placeholder | Descrição | Exemplo |
-| --- | --- | --- |
-| `%nexusprism_machines_count%` | Total de máquinas colocadas pelo jogador | `42` |
 
 ---
 
@@ -181,16 +164,6 @@ Requerem que o LuckPerms esteja instalado.
 | --- | --- | --- |
 | `%nexusprism_discord_linked%` | `true` / `false` | — |
 | `%nexusprism_discord_id%` | ID snowflake do Discord | string vazia se não vinculado |
-
----
-
-## Guia
-
-| Placeholder | Descrição |
-| --- | --- |
-| `%nexusprism_guide_<id>%` | Entrada dinâmica do guia para ID de item/máquina |
-
-Esses são dinâmicos — substitua `<id>` por qualquer ID de item ou máquina registrado.
 
 ---
 

@@ -198,28 +198,34 @@ softdepend: [NexusPrism]
 
 ### Using the API
 
+There is no central `NexusPrismAPI.getInstance()` service locator — each subsystem exposes
+its own static registry class instead. For example, territory/claim checks:
+
 ```java
-import io.github.otiger.nexusprism.api.NexusPrismAPI;
-import io.github.otiger.nexusprism.api.items.NexusItem;
+import io.github.otiger.nexusprism.api.territory.TerritoryRegistry;
 
 public class MyAddon extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        NexusPrismAPI api = NexusPrismAPI.getInstance();
+        Location someLocation = ...;
+        Player player = ...;
 
-        // Access the item registry
-        api.getItemRegistry().getItem("COPPER_DUST").ifPresent(item -> {
-            getLogger().info("Found item: " + item.getId());
-        });
+        if (TerritoryRegistry.isClaimed(someLocation)) {
+            TerritoryRegistry.getClaimName(someLocation)
+                .ifPresent(name -> getLogger().info("Claimed by: " + name));
+        }
 
-        // Check territory at a location
-        api.getTerritoryRegistry().getTerritory(someLocation).ifPresent(territory -> {
-            getLogger().info("Location owned by: " + territory.getOwner());
-        });
+        if (!TerritoryRegistry.canBuild(player, someLocation)) {
+            // deny the action
+        }
     }
 }
 ```
+
+See [Core Module](modules/core.md) for the other real extension hooks
+(`registerBlockClassifier`, `registerAddonCommand`, `DataManager.setPlayerField`). There is no
+item registry — item content lives entirely in NexusATS now.
 
 !!! tip "Uploading to Jitpack"
     Push a tagged release to GitHub, then visit `https://jitpack.io/#TigerDevLabs/NexusPrism` and click **Look up** next to your tag to trigger the build. Once green, the dependency is ready to use.

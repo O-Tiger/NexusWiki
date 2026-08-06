@@ -1,5 +1,10 @@
 # Módulo Structures
 
+> ⚠️ **Traducción desactualizada (marcada 2026-08-06).** El sistema de tablas de botín en
+> YAML descrito abajo fue eliminado (código muerto) — el módulo ahora solo expone un hook
+> `StructureProvider` para addons. Revisar `modules/structures.md` (inglés) o
+> `modules/structures.pt.md` (portugués) para el contenido actualizado.
+
 El módulo Structures **inyecta botín personalizado** en los cofres de estructuras vanilla. Cuando el servidor genera botín para cualquier estructura soportada, el módulo añade (o reemplaza) el contenido de los cofres con ítems definidos en `structures/loot-tables.yml`.
 
 ---

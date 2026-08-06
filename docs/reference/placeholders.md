@@ -74,32 +74,14 @@ Returns empty string if the player is not in a Crystal Defense game.
 
 ## Player Stats
 
+⚠️ Item/machine/energy/research stat placeholders (blocks broken, machines placed, items
+crafted, energy generated, research unlocked) were removed 2026-08-06 — the underlying
+`player_stats` table and the systems that would feed it were confirmed dead (no code ever
+persisted or fed those values; see `ECOSYSTEM.md`). Only generic player-level stats remain:
+
 | Placeholder | Description | Example |
 | --- | --- | --- |
-| `%nexusprism_player_blocks_broken%` | Total blocks broken | `48320` |
-| `%nexusprism_player_machines_placed%` | Total machines placed | `214` |
-| `%nexusprism_player_items_crafted%` | Total items crafted | `5630` |
-| `%nexusprism_player_energy_generated%` | Total energy generated (RF) | `1200000` |
-| `%nexusprism_player_items_smelted%` | Total items smelted | `890` |
-| `%nexusprism_player_research_unlocked%` | Research entries unlocked | `34` |
 | `%nexusprism_player_level%` | Player NexusPrism level | `15` |
-| `%nexusprism_researched_<id>%` | `true` if a specific research is unlocked | `true` |
-
----
-
-## Backpacks
-
-| Placeholder | Description | Example |
-| --- | --- | --- |
-| `%nexusprism_backpacks_owned%` | Number of backpacks the player owns | `2` |
-
----
-
-## Machines
-
-| Placeholder | Description | Example |
-| --- | --- | --- |
-| `%nexusprism_machines_count%` | Total machines placed by player | `42` |
 
 ---
 
@@ -111,16 +93,6 @@ Returns empty string if the player is not in a Crystal Defense game.
 | `%nexusprism_lp_suffix%` | Player's LuckPerms suffix | `&7✦` |
 
 These require LuckPerms to be installed.
-
----
-
-## Guide
-
-| Placeholder | Description |
-| --- | --- |
-| `%nexusprism_guide_<id>%` | Dynamic guide entry for item/machine ID |
-
-These are dynamic — replace `<id>` with any registered item or machine ID.
 
 ---
 
