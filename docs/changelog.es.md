@@ -4,6 +4,15 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-08-09] · `632d673`
+
+
+### 🔧Mantenimiento
+
+- **deps**: Mejora el controlador JDBC postgresql 42.7.11 -> 42.7.12
+
+---
+
 ## [2026-08-09] · `9f261ed`
 
 

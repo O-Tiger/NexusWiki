@@ -4,6 +4,15 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-08-09] · `632d673`
+
+
+### 🔧Manutenção
+
+- **deps**: Bump driver JDBC postgresql 42.7.11 -> 42.7.12
+
+---
+
 ## [2026-08-09] · `9f261ed`
 
 

@@ -5,6 +5,15 @@
 
 ---
 
+## [2026-08-09] · `632d673`
+
+
+### 🔧 Maintenance
+
+- **deps**: Bump postgresql JDBC driver 42.7.11 -> 42.7.12
+
+---
+
 ## [2026-08-09] · `9f261ed`
 
 
