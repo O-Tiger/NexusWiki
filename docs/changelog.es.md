@@ -4,6 +4,20 @@
 > Traducido automáticamente — pueden esperarse pequeñas diferencias de redacción.
 
 ---
+## [2026-08-09] · `9f261ed`
+
+
+### ✨Añadido See More
+
+- **economy**: Agregar puente de moneda basado en encuestas
+- **discord**: Enlaces de cuenta espejo a nexus-bot
+
+### 🐛 Corregido See More
+
+- **config**: Eliminar estructuras colgantes/entradas de investigación
+
+---
+
 ## [2026-08-06] · `ab72213`
 
 

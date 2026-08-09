@@ -4,6 +4,20 @@
 > Traduzido automaticamente — pequenas diferenças de fraseado são esperadas.
 
 ---
+## [2026-08-09] · `9f261ed`
+
+
+### ✨ Adicionado
+
+- **economy**: Adicionar ponte monetária baseada em pesquisas
+- **discord**: Links de conta espelhada para nexus-bot
+
+### 🐛 Corrigido
+
+- **config**: Remover estruturas/entradas de pesquisa pendentes
+
+---
+
 ## [2026-08-06] · `ab72213`
 
 

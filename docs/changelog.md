@@ -5,6 +5,20 @@
 
 ---
 
+## [2026-08-09] · `9f261ed`
+
+
+### ✨ Added
+
+- **economy**: Add polling-based currency bridge
+- **discord**: Mirror account links to nexus-bot
+
+### 🐛 Fixed
+
+- **config**: Remove dangling structures/research entries
+
+---
+
 ## [2026-08-06] · `ab72213`
 
 
